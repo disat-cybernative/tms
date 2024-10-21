@@ -197,42 +197,126 @@
         <div class="content-box p-4 z-0">
           <div class="container-fluid">
             <!-- Table Start -->
-            <!-- <div class="container z-1 position-relative float-end"> -->
-            <div
-              class="z-1 position-relative mb-2 d-flex align-items-center justify-content-between"
-              style="max-width: 100%"
-            >
-              <div class="search-container">
-                <i class="bi bi-search search-icon"></i>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Search here..."
-                  aria-label="Search"
-                />
-              </div>
-              <div class="btn-group dropdown float-end">
-                <!-- Location Dropdown -->
-                <a
-                  href="departmentform.html"
-                  type="button"
-                  class="z-0 btn btn-location btn-border"
-                  style="border-radius: 5px"
-                >
-                  Add Department
-                </a>
-                <span class="dropdown-divider"></span>
-                <button
-                  type="button"
-                  class="btn btn-location dropdown-toggle dropdown-toggle-split btn-location-split"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <span class="visually-hidden">Toggle Dropend</span>
-                </button>
-                <ul class="dropdown-menu location-drop">
-                  <li><a class="dropdown-item" href="#">Import</a></li>
-                </ul>
+            <div class="z-1 position-relative mb-2">
+              <div
+                class="row m-0 g-2 align-items-center justify-content-between"
+                style="max-width: 100%"
+              >
+                <!-- Search box -->
+                <div class="col-md-4">
+                  <div class="search-container d-flex align-items-center">
+                    <i class="bi bi-search search-icon"></i>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search here..."
+                      aria-label="Search"
+                    />
+                  </div>
+                </div>
+
+                <!-- Dropdown and Add Department Button -->
+                <div class="col-md-8 d-flex justify-content-md-end">
+                  <div class="btn-group dropdown me-2">
+                    <!-- Location dropdown -->
+                    <div class="dropdown dropdown-bgcolor">
+                      <button
+                        class="btn btn-outline-secondary dropdown-toggle location-dropdown d-flex justify-content-between align-items-center"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <span>Location</span>
+                        <span class="dropdown-arrow"></span>
+                      </button>
+                      <ul
+                        class="dropdown-menu dropdown-checkbox"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <li class="locate-dropbox">
+                          <div class="search-container">
+                            <i class="bi bi-search search-icon"></i>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Search here..."
+                              aria-label="Search"
+                            />
+                          </div>
+                        </li>
+                        <li class="p-1">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="batterStation"
+                            />
+                            <label class="form-check-label" for="batterStation">
+                              The Batter Station
+                            </label>
+                          </div>
+                        </li>
+                        <li class="p-1 border-top border-1">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="mapleStreetKitchen"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="mapleStreetKitchen"
+                            >
+                              Maple Street Kitchen
+                            </label>
+                          </div>
+                        </li>
+                        <li class="p-1 border-top border-1">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="fluffyStackHouse"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="fluffyStackHouse"
+                            >
+                              Fluffy Stack House
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Add Department Button -->
+                  <div class="btn-group dropdown float-end">
+                    <a
+                      href="locationform.html"
+                      type="button"
+                      class="z-0 btn btn-location btn-border"
+                    >
+                      Add Department
+                    </a>
+                    <span class="dropdown-divider"></span>
+                    <button
+                      type="button"
+                      class="btn btn-location dropdown-toggle dropdown-toggle-split btn-location-split"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="visually-hidden">Toggle Dropend</span>
+                    </button>
+                    <ul class="dropdown-menu location-drop">
+                      <li><a class="dropdown-item" href="#">Import</a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="table-responsive">
