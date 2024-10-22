@@ -28,7 +28,7 @@ body {
   height: 100vh;
   background-color: white;
   padding-top: 15px;
-  width: 100px;
+  width: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,9 +87,9 @@ body {
 /* Sidebar CSS End */
 
 .main-content {
-  margin-left: 110px;
+  margin-left: 80px;
   padding: 20px;
-  width: calc(100% - 110px);
+  width: calc(100% - 80px);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -325,11 +325,19 @@ div.dt-container select.dt-input {
 /* Prevent background color change on hover */
 .location-dropdown:hover,
 .location-dropdown:focus,
+.location-dropdown:active,
+.location-dropdown:focus-visible,
 .locat-btn:hover,
-.locat-btn:focus {
+.locat-btn:focus,
+.locat-btn:active,
+.locat-btn:focus-visible {
   background-color: #fff !important;
   color: #6c757d !important;
-  border-color: #ced4da;
+  border: 1px solid #e4e5e7 !important;
+  box-shadow: none !important;
+}
+.locat-btn {
+  border: 1px solid #e4e5e7 !important;
 }
 .picker-width {
   width: 100% !important;
@@ -341,7 +349,7 @@ div.dt-container select.dt-input {
 
 .location-dropdownmenu {
   width: 100%; /* Ensures full width of the dropdown menu */
-  max-height: 200px;
+  max-height: 155px;
   overflow-y: auto;
 }
 
@@ -370,8 +378,9 @@ div.dt-container select.dt-input {
   position: absolute;
   left: 10px;
   top: 10px;
-  font-size: 14px;
   color: #6c757d;
+  width: 20px;
+  height: 20px;
 }
 
 .button-text {
@@ -409,7 +418,9 @@ div.dt-container .dt-paging .dt-paging-button.current:hover {
   width: 100%;
   max-width: 331px;
 }
-
+.dropdown-header .search-container {
+  max-width: 100% !important;
+}
 .search-container input[type="text"] {
   width: 100%;
   padding: 8px 15px 8px 40px; /* Adjust padding for input text */
@@ -425,7 +436,6 @@ div.dt-container .dt-paging .dt-paging-button.current:hover {
   top: 50%;
   transform: translateY(-50%);
   color: #aaa;
-  font-size: 18px;
 }
 .locate-dropbox .search-container .search-icon {
   position: absolute;
@@ -433,7 +443,6 @@ div.dt-container .dt-paging .dt-paging-button.current:hover {
   top: 50%;
   transform: translateY(-50%);
   color: #aaa;
-  font-size: 15px;
 }
 .locate-dropbox .search-container input[type="text"] {
   width: 100%;
@@ -530,19 +539,19 @@ div.dt-container .dt-paging .dt-paging-button.current:hover {
 
 /* Sidebar Dropdown CSS Start */
 ul.dropdown-menu.drop-sidebar.active-tab.show.master-dropdown {
-  transform: translate(81px, -90px) !important;
+  transform: translate(70px, -90px) !important;
 }
 ul.dropdown-menu.drop-sidebar.active-tab.show.user-dropdown {
-  transform: translate(81px, -5px) !important;
+  transform: translate(70px, -5px) !important;
 }
 ul.dropdown-menu.drop-sidebar.active-tab.show.training-dropdown {
-  transform: translate(81px, -20px) !important;
+  transform: translate(70px, -24px) !important;
 }
 ul.dropdown-menu.drop-sidebar.active-tab.show.content-dropdown {
-  transform: translate(81px, -20px) !important;
+  transform: translate(70px, -20px) !important;
 }
 ul.dropdown-menu.drop-sidebar.active-tab.show.setting-dropdown {
-  transform: translate(81px, 10px) !important;
+  transform: translate(70px, 6px) !important;
 }
 /* Sidebar Dropdown CSS End */
 .dropdown-menu.dropdown-checkbox {
@@ -573,11 +582,99 @@ ul.dropdown-menu.drop-sidebar.active-tab.show.setting-dropdown {
   border-radius: 8px;
 }
 .modal-body h4 {
-  font-size: 22px !important;
+  font-size: 20px !important;
 }
 .modal-body p {
-  font-size: 20px !important;
+  font-size: 18px !important;
 }
 /* Modal CSS End */
 
+/* Input TextBox CSS Start */
 
+/* Container to keep the input and label inline */
+.floating-label-inline {
+  position: relative;
+  width: auto;
+}
+
+/* Floating label styling */
+.floating-label-inline label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  color: #94979e;
+  font-size: 14px;
+  font-weight: 500;
+}
+.floating-label-inline label.textarea-label {
+  top: 10%;
+}
+/* When input has focus or is not empty, move label to top */
+.floating-label-inline input:focus + label,
+.floating-label-inline input:not(:placeholder-shown) + label {
+  top: 0;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  background-color: white;
+}
+.floating-label-inline textarea:focus + label,
+.floating-label-inline textarea:not(:placeholder-shown) + label {
+  top: 0;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  background-color: white;
+}
+
+/* Input field styling */
+.floating-label-inline input,
+.floating-label-inline textarea {
+  width: 100%;
+  border: 1px solid #e4e5e7;
+  border-radius: 5px;
+  outline: none;
+  height: 38px;
+  padding-left: 10px;
+  font-size: 14px;
+  color: #1b1c1e;
+}
+.floating-label-inline textarea {
+  padding-top: 8px;
+  height: 200px;
+}
+
+/* Focus effect on input field */
+.floating-label-inline input:focus,
+.floating-label-inline textarea:focus {
+  border: 1px solid #e4e5e7;
+}
+
+/* Required label with asterisk */
+.required-label::after {
+  content: "*";
+  color: red;
+  padding-left: 4px;
+}
+.drop-color {
+  color: #94979e !important;
+  font-size: 14px !important;
+}
+.drop-color option {
+  font-size: 14px !important;
+}
+.form-control:focus {
+  box-shadow: none !important;
+}
+/* Input TextBox CSS End */
+.location-dropdownmenu li a.dropdown-item {
+  font-size: 14px;
+}
+
+.form-select:focus {
+  border: 1px solid #e4e5e7 !important;
+  box-shadow: none !important;
+}
