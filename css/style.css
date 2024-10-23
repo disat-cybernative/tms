@@ -581,6 +581,9 @@ ul.dropdown-menu.drop-sidebar.active-tab.show.setting-dropdown {
   height: 40px;
   border-radius: 8px;
 }
+.modal-cancel-btn {
+  border: 1px solid #61646b !important;
+}
 .modal-body h4 {
   font-size: 20px !important;
 }
@@ -646,6 +649,9 @@ ul.dropdown-menu.drop-sidebar.active-tab.show.setting-dropdown {
   padding-top: 8px;
   height: 200px;
 }
+.floating-label-inline.training-textarea textarea {
+  height: 125px !important;
+}
 
 /* Focus effect on input field */
 .floating-label-inline input:focus,
@@ -677,4 +683,9 @@ ul.dropdown-menu.drop-sidebar.active-tab.show.setting-dropdown {
 .form-select:focus {
   border: 1px solid #e4e5e7 !important;
   box-shadow: none !important;
+}
+.heading-color {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 600;
 }
