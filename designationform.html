@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Family CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Assistant:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="d-flex">
+      <!-- Sidebar -->
+      <nav class="sidebar d-flex flex-column p-3 justify-content-between z-1">
+        <a href="#" class="nav-link logo-img">
+          <img src="images/Logo.png" alt="" srcset="" />
+        </a>
+        <a href="index.html" class="nav-link dashboard-link">
+          <img src="images/Dashboard (1).svg" alt="" srcset="" />
+        </a>
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="masterDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Master.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab master-dropdown"
+            aria-labelledby="masterDropdown"
+          >
+            <li><a class="dropdown-item" href="location.html">Location</a></li>
+            <li>
+              <a
+                class="dropdown-item dropdown-item-divider"
+                href="department.html"
+                >Department</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="area.html"
+                >Area</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="jobrole.html"
+                >Job Role</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item dropdown-item-divider"
+                href="trainingtype.html"
+                >Training Type</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Content Type</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Designation</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="usersDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Users.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab user-dropdown"
+            aria-labelledby="usersDropdown"
+          >
+            <li><a class="dropdown-item" href="#subitem1">Employee</a></li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Workflow</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="trainingDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Training.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab training-dropdown"
+            aria-labelledby="trainingDropdown"
+          >
+            <li><a class="dropdown-item" href="#subitem1">Training</a></li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Training Schedule</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Job Role Mapping</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="contentDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Content.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab content-dropdown"
+            aria-labelledby="contentDropdown"
+          >
+            <li>
+              <a class="dropdown-item" href="#subitem1">Content Library</a>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Question Bank</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Quiz</a
+              >
+            </li>
+          </ul>
+        </div>
+        <a href="#services" class="nav-link dashboard-link">
+          <img src="images/Reports.svg" alt="" srcset="" />
+        </a>
+
+        <a href="#services" class="nav-link dashboard-link">
+          <img src="images/Analytics.svg" alt="" srcset="" />
+        </a>
+        <a href="#home" class="nav-link dashboard-link">
+          <img src="images/Notification.svg" alt="" srcset="" />
+        </a>
+
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="settingDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Setting.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab setting-dropdown"
+            aria-labelledby="settingDropdown"
+          >
+            <li><a class="dropdown-item" href="#subitem1">User Role</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <h3>Manage Designation</h3>
+        <div class="content-box p-4 z-0">
+          <div class="ms-3">
+            <img src="images/designationIcon.svg" alt="" />
+            <span class="heading-color">Designation Details</span>
+          </div>
+          <div class="container-fluid">
+            <form>
+              <div class="row">
+                <div class="col-md-8 p-0">
+                  <div class="row m-0">
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <div class="floating-label-inline">
+                          <input
+                            type="text"
+                            id="name"
+                            placeholder=" "
+                            required
+                          />
+                          <label for="phone" class="required-label"
+                            >Designation</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <div class="floating-label-inline">
+                          <input
+                            type="text"
+                            id="code"
+                            placeholder=" "
+                            required
+                          />
+                          <label for="phone" class="required-label">Code</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3 mt-md-3 mt-sm-0">
+                        <div class="floating-label-inline">
+                          <input
+                            type="text"
+                            id="code"
+                            placeholder=" "
+                            required
+                          />
+                          <label for="phone" class="required-label"
+                            >Display Name</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="mb-3">
+                    <div class="floating-label-inline">
+                      <textarea
+                        type="text"
+                        id="description"
+                        placeholder=" "
+                        required
+                        rows="12"
+                      ></textarea>
+                      <label for="phone" class="required-label textarea-label"
+                        >Description</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center gap-4 my-3">
+                  <button type="submit" class="btn-save">Save</button>
+                  <button type="button" class="btn-cancel">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".sidebar a").forEach((link) => {
+        link.addEventListener("click", function () {
+          // Remove active class from all links
+          document.querySelectorAll(".sidebar a").forEach((link) => {
+            link.classList.remove("active");
+          });
+          // Add active class to the clicked link
+          this.classList.add("active");
+        });
+      });
+    </script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+    />
+  </body>
+</html>
