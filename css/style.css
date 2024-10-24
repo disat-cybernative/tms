@@ -313,6 +313,7 @@ div.dt-container select.dt-input {
   border: 1px solid grey;
 }
 /* Button CSS End */
+
 .location-dropdown {
   background-color: #fff;
   color: #6c757d;
@@ -321,7 +322,9 @@ div.dt-container select.dt-input {
   height: 40px;
   margin-right: 10px;
 }
-
+.location-dropdown.job-dropdown {
+  margin-right: 0px !important;
+}
 /* Prevent background color change on hover */
 .location-dropdown:hover,
 .location-dropdown:focus,
@@ -417,6 +420,9 @@ div.dt-container .dt-paging .dt-paging-button.current:hover {
   position: relative;
   width: 100%;
   max-width: 331px;
+}
+.job-search .search-container {
+  max-width: 100% !important;
 }
 .dropdown-header .search-container {
   max-width: 100% !important;
@@ -558,7 +564,19 @@ ul.dropdown-menu.drop-sidebar.active-tab.show.setting-dropdown {
   max-height: 200px;
   width: 280px;
   overflow-y: auto;
-  padding: 10px; /* Adding padding inside the dropdown */
+  padding: 10px;
+}
+.dropdown-menu.dropdown-checkbox.jobrole-dropmenu {
+  max-height: 200px;
+  width: auto;
+  overflow-y: auto;
+  padding: 10px;
+}
+.dropdown-menu.dropdown-checkbox.workflow-dropmenu {
+  max-height: 200px;
+  width: auto;
+  overflow-y: auto;
+  padding: 10px;
 }
 
 .form-check .form-check-input:checked {
@@ -581,6 +599,20 @@ ul.dropdown-menu.drop-sidebar.active-tab.show.setting-dropdown {
   height: 40px;
   border-radius: 8px;
 }
+.modal-assign-btn {
+  width: 110px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #4a436c !important;
+  color: white !important;
+}
+.modal-assign-cancel-btn {
+  width: 110px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #4a436c !important;
+  color: #4a436c !important;
+}
 .modal-cancel-btn {
   border: 1px solid #61646b !important;
 }
@@ -589,6 +621,13 @@ ul.dropdown-menu.drop-sidebar.active-tab.show.setting-dropdown {
 }
 .modal-body p {
   font-size: 18px !important;
+}
+.modal-body .body-font p {
+  font-size: 16px !important;
+  font-weight: 600;
+  margin-bottom: 0px !important;
+  color: #000000;
+  font-family: Assistant;
 }
 /* Modal CSS End */
 
@@ -789,7 +828,15 @@ input[type="radio"]:checked::before {
   transform: translate(-50%, -50%);
 }
 /* Radio Button CSS End */
+
+/* Checkbox Hover CSS Start */
 li:hover .form-check-label,
 li:hover span {
   color: #b9135b;
+}
+/* Checkbox Hover CSS End */
+
+.close-img {
+  width: 22px;
+  height: 22px;
 }
