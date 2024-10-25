@@ -22,7 +22,7 @@ body {
 }
 
 .sidebar {
-  position: fixed; /* Makes the sidebar sticky */
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
@@ -32,7 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 .sidebar a {
   color: #343a40;
@@ -212,6 +212,37 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
+  transform: translateX(34px);
+}
+.status-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.status-slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .status-slider {
+  background-color: #4a436c;
+}
+
+input:checked + .status-slider:before {
   transform: translateX(34px);
 }
 /* Switch CSS End */
@@ -840,3 +871,17 @@ li:hover span {
   width: 22px;
   height: 22px;
 }
+.sidebar a.profile-img {
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+  position: absolute;
+  bottom: 0; /* Keeps the image at the bottom */
+  width: 100%; /* Ensures the image container takes up full width of sidebar */
+}
+
+.sidebar a.profile-img img {
+  height: 44px;
+  margin-bottom: 10px;
+}
+
