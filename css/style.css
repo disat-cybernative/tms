@@ -380,7 +380,10 @@ div.dt-container select.dt-input {
 .location-dropdow-btn {
   width: 100%;
 }
-
+.extension-dropdow-btn {
+  height: 38px;
+  width: 100%;
+}
 .location-dropdownmenu {
   width: 100%; /* Ensures full width of the dropdown menu */
   max-height: 155px;
@@ -722,7 +725,9 @@ ul.dropdown-menu.drop-sidebar.active-tab.show.setting-dropdown {
 .floating-label-inline.training-textarea textarea {
   height: 125px !important;
 }
-
+.floating-label-inline.content-textarea textarea {
+  height: 100px !important;
+}
 /* Focus effect on input field */
 .floating-label-inline input:focus,
 .floating-label-inline textarea:focus {
@@ -884,4 +889,230 @@ li:hover span {
   height: 44px;
   margin-bottom: 10px;
 }
+/* Set fixed width for dropdown */
 
+.dropdown-menu.training-dropmenu {
+  width: auto;
+  min-width: 150px;
+  max-width: 200px;
+  overflow: hidden;
+  margin-right: 30px !important;
+  margin-top: 36px !important;
+}
+
+/* Adjust positioning to ensure the dropdown doesn't go out of bounds */
+
+.dropdown-menu.training-dropmenu {
+  position: absolute;
+  right: 0;
+}
+
+/* Optional: You can adjust the dropdown padding */
+
+.dropdown-menu.training-dropmenu a {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ddd; /* Add a light border */
+}
+.dropdown-menu.training-dropmenu a:last-child {
+  border-bottom: none !important;
+}
+/* No Data CSS Start */
+.nodata-img {
+  width: 100px;
+  height: 100px;
+}
+.nodata-font {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1b1c1e;
+  font-family: Assistant;
+}
+.nodata-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #484b51;
+  font-family: Assistant;
+}
+/* No Data CSS End */
+
+/* Sequence Number CSS Start */
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.form-control.seq-num {
+  width: 100%;
+  padding: 8px 40px;
+  text-align: center;
+}
+
+.minus-icon,
+.plus-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.minus-icon {
+  left: 10px; /* Position of minus icon */
+}
+
+.plus-icon {
+  right: 10px; /* Position of plus icon */
+}
+.minus-icon img,
+.plus-icon img {
+  width: 24px;
+  height: 24px;
+}
+/* Sequence Number CSS End */
+
+/* File Upload Icon CSS Start */
+.custom-file-upload {
+  border: 1px solid #e4e5e7;
+  border-radius: 5px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+  color: #94979e;
+  font-size: 14px;
+  height: 38px;
+}
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+.upload-text {
+  margin: 0;
+}
+.upload-icon .upload-img {
+  width: 20px;
+  height: 20px;
+}
+/* File Upload Icon CSS End */
+
+/* Upload Content CSS Start */
+.upload-header {
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  border: 1px solid #dee2e6;
+  height: 242px; /* Fixed height for equal box size */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.upload-header h6 {
+  font-family: Assistant;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1b1c1e;
+  margin-top: 0;
+}
+
+.upload-header p {
+  font-family: Assistant;
+  font-weight: 600;
+  font-size: 16px;
+  color: #61646b;
+  margin-bottom: auto; /* Pushes p element upwards */
+}
+
+.upload-area {
+  border: 1px dashed #4a436c;
+  border-radius: 12px;
+  width: auto;
+  height: 128px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: #6c757d;
+  background-color: #f0eff5;
+  transition: background-color 0.3s;
+  margin-top: auto;
+  margin-bottom: 5px;
+}
+.upload-area.library-bkg {
+  background-color: #fef3e6;
+}
+.upload-area.content-bkg {
+  background-color: #fde8f1;
+}
+.upload-area.quiz-bkg {
+  background-color: #e6fff9;
+}
+/* .upload-area:hover {
+  background-color: #f8f9fa;
+} */
+
+.upload-area input {
+  display: none;
+}
+.upload-area img {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+.upload-area .import-font {
+  font-family: Assistant;
+  font-weight: 700;
+  font-size: 18px;
+  color: #4a436c;
+}
+.upload-area .drag-font {
+  font-family: Assistant;
+  font-weight: 600;
+  color: #61646b;
+  font-size: 16px;
+}
+/* Upload Content CSS End */
+
+/* Modal Library CSS Start */
+.modal-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 15px;
+  height: 350px; /* Set a fixed height */
+  display: flex;
+  flex-direction: column;
+}
+
+.content-library-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+img.img-fluid.arrow-img {
+  width: 24px;
+  height: 24px;
+}
+.content-border {
+  border-bottom: 1px solid #e4e5e7;
+}
+.content-border span,
+.content-border p {
+  color: #484b51;
+  font-weight: 400;
+  font-size: 16px !important;
+}
+.modal-box h6 {
+  font-weight: 700;
+  font-family: Assistant;
+  font-size: 20px;
+  color: #1b1c1e;
+}
+/* Modal Library CSS End */
