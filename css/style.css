@@ -1335,7 +1335,9 @@ img.img-fluid.arrow-img {
   font-weight: 500;
 }
 /* Sequnce CSS End */
-
+.training-bkg {
+  background-color: #f2f2f3;
+}
 /* Calender CSS Start */
 
 /* Calender CSS End */
