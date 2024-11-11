@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css"
+    />
+    <!-- Font Family CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Assistant:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="d-flex">
+      <!-- Sidebar -->
+      <nav class="sidebar d-flex flex-column p-3 justify-content-between z-1">
+        <a href="#" class="nav-link logo-img">
+          <img src="images/Logo.png" alt="" srcset="" />
+        </a>
+        <a href="index.html" class="nav-link dashboard-link">
+          <img src="images/Dashboard (1).svg" alt="" srcset="" />
+        </a>
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="masterDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Master.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab master-dropdown"
+            aria-labelledby="masterDropdown"
+          >
+            <li><a class="dropdown-item" href="location.html">Location</a></li>
+            <li>
+              <a
+                class="dropdown-item dropdown-item-divider"
+                href="department.html"
+                >Department</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="area.html"
+                >Area</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="jobrole.html"
+                >Job Role</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Training Type</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Content Type</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Designation</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="usersDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Users.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab user-dropdown"
+            aria-labelledby="usersDropdown"
+          >
+            <li><a class="dropdown-item" href="#subitem1">Employee</a></li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Workflow</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="trainingDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Training.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab training-dropdown"
+            aria-labelledby="trainingDropdown"
+          >
+            <li><a class="dropdown-item" href="#subitem1">Training</a></li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Training Schedule</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Job Role Mapping</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="contentDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Content.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab content-dropdown"
+            aria-labelledby="contentDropdown"
+          >
+            <li>
+              <a class="dropdown-item" href="#subitem1">Content Library</a>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Question Bank</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Quiz</a
+              >
+            </li>
+          </ul>
+        </div>
+        <a href="#services" class="nav-link dashboard-link">
+          <img src="images/Reports.svg" alt="" srcset="" />
+        </a>
+
+        <a href="#services" class="nav-link dashboard-link">
+          <img src="images/Analytics.svg" alt="" srcset="" />
+        </a>
+        <a href="#home" class="nav-link dashboard-link">
+          <img src="images/Notification.svg" alt="" srcset="" />
+        </a>
+
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="settingDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Setting.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab setting-dropdown"
+            aria-labelledby="settingDropdown"
+          >
+            <li><a class="dropdown-item" href="#subitem1">User Role</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <h3>Question Listing</h3>
+        <div class="content-box p-4 z-0">
+          <div class="container-fluid">
+            <!-- Table Start -->
+            <div class="z-1 position-relative mb-2">
+                <div
+                  class="row m-0 g-2 align-items-center justify-content-between"
+                  style="max-width: 100%"
+                >
+                  <!-- Search box -->
+                  <div class="col-md-4">
+                    <div class="search-container d-flex align-items-center">
+                      <img
+                        src="images/searchImage.svg"
+                        class="search-icon img-fluid"
+                        alt=""
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Search here..."
+                        aria-label="Search"
+                      />
+                    </div>
+                  </div>
+  
+                  <!-- Dropdown and Add Department Button -->
+                  <div
+                  class="col-md-8 col-sm-12 d-flex justify-content-md-end justify-content-sm-start"
+                >
+                  <!-- Location Dropdown -->
+                  <div class="btn-group dropdown me-2">
+                    <button
+                      class="btn btn-outline-secondary dropdown-toggle location-dropdown d-flex justify-content-between align-items-center"
+                      type="button"
+                      id="locationDropdownButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span>Training</span>
+                      <span class="dropdown-arrow"></span>
+                    </button>
+                    <ul
+                      class="dropdown-menu dropdown-checkbox"
+                      aria-labelledby="locationDropdownButton"
+                    >
+                      <li class="locate-dropbox">
+                        <div class="search-container">
+                          <img
+                            src="images/searchImage.svg"
+                            class="search-icon img-fluid"
+                            alt=""
+                          />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search here..."
+                            aria-label="Search"
+                          />
+                        </div>
+                      </li>
+                      <li class="p-1">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="batterStation"
+                          />
+                          <label class="form-check-label" for="batterStation">
+                            The Batter Station
+                          </label>
+                        </div>
+                      </li>
+                      <li class="p-1 border-top border-1">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="mapleStreetKitchen"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="mapleStreetKitchen"
+                          >
+                            Maple Street Kitchen
+                          </label>
+                        </div>
+                      </li>
+                      <li class="p-1 border-top border-1">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="fluffyStackHouse"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="fluffyStackHouse"
+                          >
+                            Fluffy Stack House
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Department Dropdown -->
+                  <div class="btn-group dropdown me-2">
+                    <button
+                      class="btn btn-outline-secondary dropdown-toggle location-dropdown d-flex justify-content-between align-items-center"
+                      type="button"
+                      id="departmentDropdownButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span>Topic</span>
+                      <span class="dropdown-arrow"></span>
+                    </button>
+                    <ul
+                      class="dropdown-menu dropdown-checkbox"
+                      aria-labelledby="departmentDropdownButton"
+                    >
+                      <li class="locate-dropbox">
+                        <div class="search-container">
+                          <img
+                            src="images/searchImage.svg"
+                            class="search-icon img-fluid"
+                            alt=""
+                          />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search here..."
+                            aria-label="Search"
+                          />
+                        </div>
+                      </li>
+                      <li class="p-1">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="batterStation2"
+                          />
+                          <label class="form-check-label" for="batterStation2">
+                            The Batter Station
+                          </label>
+                        </div>
+                      </li>
+                      <li class="p-1 border-top border-1">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="mapleStreetKitchen2"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="mapleStreetKitchen2"
+                          >
+                            Maple Street Kitchen
+                          </label>
+                        </div>
+                      </li>
+                      <li class="p-1 border-top border-1">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="fluffyStackHouse2"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="fluffyStackHouse2"
+                          >
+                            Fluffy Stack House
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Add Department Button -->
+                  <div class="btn-group dropdown float-end">
+                    <a
+                      href="questionbankform.html"
+                      type="button"
+                      class="z-0 btn btn-location btn-border"
+                    >
+                      Add Question
+                    </a>
+                  </div>
+                </div>
+                </div>
+              </div>
+            <div class="table-responsive">
+              <table id="dataTable" class="table" style="width: 100%">
+                <thead>
+                  <tr>
+                    <th>Training</th>
+                    <th>Topic</th>
+                    <th>Question Text</th>
+                    <th>Mark</th>
+                    <th>Question Type</th>
+                    <th>Question Language</th>
+                    <th>Question Level</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Billing</td>
+                    <td>Invoice Generation</td>
+                    <td>How Do I Generate A New Voice?</td>
+                    <td>1</td>
+                    <td>Multiple Choice</td>
+                    <td>English</td>
+                    <td>Easy</td>
+                    <td>
+                      <div class="d-flex">
+                        <a href="#" class="text-primary" title="Edit"
+                          ><img src="images/EditImage.svg" alt="" srcset="" />
+                        </a>
+                        <a
+                          href="#"
+                          class="text-danger ms-2"
+                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#deleteModal"
+                        >
+                          <img src="images/DeleteImage.svg" alt="Delete Icon" />
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Billing</td>
+                    <td>Invoice Generation</td>
+                    <td>How Do I Generate A New Voice?</td>
+                    <td>1</td>
+                    <td>Multiple Choice</td>
+                    <td>English</td>
+                    <td>Easy</td>
+                    <td>
+                      <div class="d-flex">
+                        <a href="#" class="text-primary" title="Edit"
+                          ><img src="images/EditImage.svg" alt="" srcset="" />
+                        </a>
+                        <a
+                          href="#"
+                          class="text-danger ms-2"
+                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#deleteModal"
+                        >
+                          <img src="images/DeleteImage.svg" alt="Delete Icon" />
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Billing</td>
+                    <td>Invoice Generation</td>
+                    <td>How Do I Generate A New Voice?</td>
+                    <td>1</td>
+                    <td>Multiple Choice</td>
+                    <td>English</td>
+                    <td>Easy</td>
+                    <td>
+                      <div class="d-flex">
+                        <a href="#" class="text-primary" title="Edit"
+                          ><img src="images/EditImage.svg" alt="" srcset="" />
+                        </a>
+                        <a
+                          href="#"
+                          class="text-danger ms-2"
+                          title="Delete"
+                          data-bs-toggle="modal"
+                          data-bs-target="#deleteModal"
+                        >
+                          <img src="images/DeleteImage.svg" alt="Delete Icon" />
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item active">
+                    <a class="page-link active-link" href="#">2</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Start -->
+    <div
+      class="modal fade"
+      id="deleteModal"
+      tabindex="-1"
+      aria-labelledby="deleteModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-header border-bottom-0 pb-0 d-flex justify-content-center"
+          >
+            <h6 class="modal-title" id="deleteModalLabel">
+              <img src="images/DeleteModalicon.svg" alt="" />
+            </h6>
+          </div>
+          <div class="modal-body p-0 mt-1">
+            <h4 class="text-danger text-center mb-0">Delete Area</h4>
+            <p class="text-center mb-0">
+              Are you sure you want to delete this area?
+            </p>
+          </div>
+          <div class="modal-footer border-top-0 d-flex justify-content-center">
+            <button type="button" class="btn btn-danger modal-delete-btn">
+              Delete
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary modal-cancel-btn"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal End -->
+    <script>
+      document.querySelectorAll(".sidebar a").forEach((link) => {
+        link.addEventListener("click", function () {
+          // Remove active class from all links
+          document.querySelectorAll(".sidebar a").forEach((link) => {
+            link.classList.remove("active");
+          });
+          // Add active class to the clicked link
+          this.classList.add("active");
+        });
+      });
+    </script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  
+  </body>
+</html>

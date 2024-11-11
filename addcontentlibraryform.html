@@ -38,10 +38,10 @@
       <!-- Sidebar -->
       <nav class="sidebar d-flex flex-column p-3 justify-content-between z-1">
         <a href="#" class="nav-link logo-img">
-          <img src="images/Logo.png" alt="" srcset="" />
+          <img src="images/LogoImg.svg" alt="" srcset="" />
         </a>
         <a href="index.html" class="nav-link dashboard-link">
-          <img src="images/Dashboard (1).svg" alt="" srcset="" />
+          <img src="images/Dashboard.svg" alt="" srcset="" />
         </a>
         <div class="dropdown dropend relative custom-tabs-container">
           <a
@@ -83,7 +83,9 @@
               >
             </li>
             <li>
-              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+              <a
+                class="dropdown-item dropdown-item-divider"
+                href="contenttype.html"
                 >Content Type</a
               >
             </li>
@@ -202,15 +204,18 @@
             <li><a class="dropdown-item" href="#subitem1">User Role</a></li>
           </ul>
         </div>
+        <a href="#home" class="nav-link profile-img">
+          <img src="images/profileImage.svg" alt="" srcset="" />
+        </a>
       </nav>
 
       <!-- Main Content -->
       <div class="main-content">
-        <h3>Training</h3>
+        <h3>Content Library</h3>
         <div class="content-box p-4 z-0">
           <div class="ms-3">
-            <img src="images/trainingIcon.svg" alt="" />
-            <span class="heading-color">Training Details</span>
+            <img src="images/contentdetailIcon.svg" alt="" />
+            <span class="heading-color">Content Details</span>
           </div>
           <div class="container-fluid">
             <form>
@@ -218,9 +223,9 @@
                 <div class="col-md-4">
                   <div class="mb-3">
                     <div class="floating-label-inline">
-                      <input type="text" id="name" placeholder=" " required />
+                      <input type="text" id="title" placeholder=" " required />
                       <label for="title" class="required-label"
-                        >Training Title</label
+                        >Content Name</label
                       >
                     </div>
                   </div>
@@ -228,231 +233,138 @@
                 <div class="col-md-4">
                   <div class="mb-3">
                     <div class="floating-label-inline">
-                      <input type="text" id="name" placeholder=" " required />
-                      <label for="code" class="required-label"
-                        >Training Code</label
+                      <input type="text" id="title" placeholder=" " required />
+                      <label for="title" class="required-label"
+                        >Content Display Name</label
                       >
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="mb-3">
-                    <div class="floating-label-inline">
-                      <input type="text" id="name" placeholder=" " required />
-                      <label for="name" class="required-label"
-                        >Training Type</label
-                      >
-                    </div>
+                    <label class="custom-file-upload" for="fileUpload">
+                      <span class="upload-text">Upload Content </span>
+                      <span class="upload-icon">
+                        <img
+                          class="upload-img"
+                          src="images/upload.svg"
+                          alt=""
+                        />
+                      </span>
+                    </label>
+                    <input
+                      type="file"
+                      id="fileUpload"
+                      class="d-none"
+                      accept=".png, .jpg, .jpeg"
+                    />
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="mb-3">
-                    <div class="floating-label-inline">
-                      <input type="text" id="name" placeholder=" " required />
-                      <label for="name" class="required-label"
-                        >Training Version</label
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="mb-3">
-                    <div class="floating-label-inline">
-                      <input type="text" id="name" placeholder=" " required />
-                      <label for="name" class="required-label"
-                        >Training Period (In Days)</label
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="mb-3">
-                    <div class="floating-label-inline">
-                      <input type="text" id="name" placeholder=" " required />
-                      <label for="name" class="required-label"
-                        >Revision Period (In Month)</label
-                      >
-                    </div>
-                  </div>
-                </div>
+                <div class="col-md-4"></div>
+              </div>
+              <div class="row mt-sm-0 mt-md-2">
                 <div class="col-md-8 p-0">
                   <div class="row m-0">
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6">
                       <div class="mb-3">
                         <div class="floating-label-inline">
                           <input
-                            type="date"
-                            id="name"
+                            type="text"
+                            id="url"
                             placeholder=" "
                             required
                           />
-                          <label for="phone" class="required-label"
-                            >Effective Date</label
+                          <label for="url" class="required-label"
+                            >Content URL</label
                           >
                         </div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="mb-3">
-                        <div class="dropdown location-dropdow-btn">
-                          <button
-                            class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
-                            type="button"
-                            id="dropdownMenuButton"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
+                        <div class="floating-label-inline">
+                          <input
+                            type="text"
+                            id="url"
+                            placeholder=" "
+                            required
+                          />
+                          <label for="url" class="required-label"
+                            >Access Key</label
                           >
-                            <span class="button-text"
-                              >Training Methodology</span
-                            >
-                            <span class="dropdown-icon dropdown-icon-n"></span>
-                          </button>
-                          <ul
-                            class="dropdown-menu location-dropdownmenu"
-                            aria-labelledby="dropdownMenuButton"
-                          >
-                            <!-- Search input with icon -->
-                            <li class="dropdown-header">
-                              <div class="search-container">
-                                <img
-                                  src="images/searchImage.svg"
-                                  class="search-icon img-fluid"
-                                  alt=""
-                                />
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  placeholder="Search here..."
-                                  aria-label="Search"
-                                />
-                              </div>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#"
-                                >The Batter Station</a
-                              >
-                            </li>
-                            <li class="border-top border-1">
-                              <a class="dropdown-item" href="#"
-                                >Maple Street Kitchen</a
-                              >
-                            </li>
-                            <li class="border-top border-1">
-                              <a class="dropdown-item" href="#"
-                                >Fluffy Stack House</a
-                              >
-                            </li>
-                            <li class="border-top border-1">
-                              <a class="dropdown-item" href="#"
-                                >Golden Griddle Cake</a
-                              >
-                            </li>
-                            <li class="border-top border-1">
-                              <a class="dropdown-item" href="#"
-                                >The Pancake Parlour</a
-                              >
-                            </li>
-                          </ul>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6">
                       <div class="mb-3">
-                        <div class="dropdown location-dropdow-btn">
-                          <button
-                            class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
-                            type="button"
-                            id="dropdownMenuButton"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
+                        <div class="floating-label-inline">
+                          <input
+                            type="text"
+                            id="keyword"
+                            placeholder=" "
+                            required
+                          />
+                          <label for="keyword" class="required-label"
+                            >URL Users</label
                           >
-                            <span class="button-text">Training Level</span>
-                            <span class="dropdown-icon dropdown-icon-n"></span>
-                          </button>
-                          <ul
-                            class="dropdown-menu location-dropdownmenu"
-                            aria-labelledby="dropdownMenuButton"
-                          >
-                            <!-- Search input with icon -->
-                            <li class="dropdown-header">
-                              <div class="search-container">
-                                <img
-                                  src="images/searchImage.svg"
-                                  class="search-icon img-fluid"
-                                  alt=""
-                                />
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  placeholder="Search here..."
-                                  aria-label="Search"
-                                />
-                              </div>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#"
-                                >The Batter Station</a
-                              >
-                            </li>
-                            <li class="border-top border-1">
-                              <a class="dropdown-item" href="#"
-                                >Maple Street Kitchen</a
-                              >
-                            </li>
-                            <li class="border-top border-1">
-                              <a class="dropdown-item" href="#"
-                                >Fluffy Stack House</a
-                              >
-                            </li>
-                            <li class="border-top border-1">
-                              <a class="dropdown-item" href="#"
-                                >Golden Griddle Cake</a
-                              >
-                            </li>
-                            <li class="border-top border-1">
-                              <a class="dropdown-item" href="#"
-                                >The Pancake Parlour</a
-                              >
-                            </li>
-                          </ul>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 d-flex justify-content-between align-items-baseline">
-                      <!-- First Radio Group -->
-                      <div class="d-flex align-items-center">
-                        <span class="me-1 mt-1">Is Mandatory? :</span>
-                        <input type="radio" id="yes1" name="mandatory1" value="Yes" />
-                        <label for="yes1" class="mt-1">Yes</label>
-                        <input type="radio" id="no1" name="mandatory1" value="No" />
-                        <label for="no1" class="mt-1">No</label>
-                      </div>
-                    
-                      <!-- Second Radio Group -->
-                      <div class="d-flex align-items-center">
-                        <span class="me-1 mt-1">Skip Allow? :</span>
-                        <input type="radio" id="yes2" name="mandatory2" value="Yes" />
-                        <label for="yes2" class="mt-1">Yes</label>
-                        <input type="radio" id="no2" name="mandatory2" value="No" />
-                        <label for="no2" class="mt-1">No</label>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <div class="floating-label-inline">
+                          <input
+                            type="text"
+                            id="keyword"
+                            placeholder=" "
+                            required
+                          />
+                          <label for="keyword" class="required-label"
+                            >URL Password</label
+                          >
+                        </div>
                       </div>
                     </div>
-                    
-                    <div class="col-md-6 mt-md-2 mt-sm-0">
-                      <span>Status:</span>
-                      <label class="switch">
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label class="custom-file-upload" for="fileUpload">
+                          <span class="upload-text"
+                            >Upload Interactive Content
+                          </span>
+                          <span class="upload-icon">
+                            <img
+                              class="upload-img"
+                              src="images/upload.svg"
+                              alt=""
+                            />
+                          </span>
+                        </label>
                         <input
-                          type="checkbox"
-                          class="status-toggle"
-                          checked
-                          data-id="1"
+                          type="file"
+                          id="fileUpload"
+                          class="d-none"
+                          accept=".png, .jpg, .jpeg"
                         />
-                        <span class="status-slider"></span>
-                      </label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <div class="floating-label-inline">
+                          <input
+                            type="text"
+                            id="keyword"
+                            placeholder=" "
+                            required
+                          />
+                          <label for="keyword" class="required-label"
+                            >Add Iframe URL</label
+                          >
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 col-sm-12">
+                <div class="col-md-4">
                   <div class="mb-3">
                     <div class="floating-label-inline">
                       <textarea
@@ -463,12 +375,12 @@
                         rows="12"
                       ></textarea>
                       <label for="phone" class="required-label textarea-label"
-                        >Descriptions</label
+                        >Description</label
                       >
                     </div>
                   </div>
                 </div>
-                <div class="d-flex justify-content-center gap-4 my-4">
+                <div class="d-flex justify-content-center gap-4 my-3">
                   <button type="submit" class="btn-save">Save</button>
                   <button type="button" class="btn-cancel">Cancel</button>
                 </div>

@@ -380,9 +380,23 @@ div.dt-container select.dt-input {
 .location-dropdow-btn {
   width: 100%;
 }
+.difflevel-dropdow-btn {
+  width: 350px;
+  border: 1px solid #e2e0eb !important;
+  border-radius: 8px;
+}
 .extension-dropdow-btn {
   height: 38px;
   width: 100%;
+}
+.map-dropdown {
+  width: 100%;
+  background-color: #fff;
+  color: #6c757d;
+  border: 1px solid #ced4da;
+  width: 100%;
+  height: 40px;
+  margin-right: 10px;
 }
 .location-dropdownmenu {
   width: 100%; /* Ensures full width of the dropdown menu */
@@ -441,6 +455,11 @@ div.dt-container select.dt-input {
 } */
 
 .locat-btn::after {
+  right: 9px;
+  top: 17px;
+  position: absolute;
+}
+.difflevel-btn::after {
   right: 9px;
   top: 17px;
   position: absolute;
@@ -609,7 +628,12 @@ ul.dropdown-menu.drop-sidebar.active-tab.show.setting-dropdown {
   overflow-y: auto;
   padding: 10px;
 }
-
+.dropdown-menu.dropdown-checkbox.map-dropmenu {
+  max-height: 200px;
+  width: 100%;
+  overflow-y: auto;
+  padding: 10px;
+}
 .form-check .form-check-input:checked {
   background-color: #b9135b !important;
   border-color: #b9135b !important;
@@ -653,7 +677,8 @@ ul.dropdown-menu.drop-sidebar.active-tab.show.setting-dropdown {
 .modal-body p {
   font-size: 18px !important;
 }
-.modal-body .body-font p {
+.modal-body .body-font p,
+.modal-body .body-font div p {
   font-size: 16px !important;
   font-weight: 600;
   margin-bottom: 0px !important;
@@ -859,6 +884,34 @@ input[type="radio"]:checked::before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.option-input input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #94979e;
+  border-radius: 50%;
+  position: relative;
+  top: 2px;
+}
+
+/* Style the checked radio button */
+.option-input input[type="radio"]:checked {
+  border-color: #94979e;
+}
+
+/* Create the red dot inside when checked */
+.option-input input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #94979e;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-48%, -50%);
 }
 /* Radio Button CSS End */
 
@@ -1092,7 +1145,6 @@ li:hover span {
   max-height: 200px;
   overflow-y: auto;
 }
-
 img.img-fluid.arrow-img {
   width: 24px;
   height: 24px;
@@ -1338,6 +1390,72 @@ img.img-fluid.arrow-img {
 .training-bkg {
   background-color: #f2f2f3;
 }
+
+/* Add Question CSS Start */
+.question-container {
+  border-radius: 8px;
+  border: 1px solid #e2e0eb;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Aligns Question Title & Buttons */
+  background-color: #faf9ff;
+  border: 1px solid #e2e0eb;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.dropdowns-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.options-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.options-container p,
+.addimg-font {
+  font-family: Assistant;
+  font-weight: 600;
+  font-size: 18px;
+  color: #484b51;
+}
+
+.option-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.mark-btn {
+  background: #8981b1;
+  border: 1px solid #4a436c;
+  width: 67px;
+  height: 34px;
+  border-radius: 8px;
+  color: white;
+}
+/* Add Question CSS End */
+
+.training-hover span:hover,.jobrole-hover span:hover{
+  color:#b9135b; 
+}
+
 /* Calender CSS Start */
 
 /* Calender CSS End */

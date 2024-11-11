@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css"
+    />
+    <!-- Font Family CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Assistant:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="d-flex">
+      <!-- Sidebar -->
+      <nav class="sidebar d-flex flex-column p-3 justify-content-between z-1">
+        <a href="#" class="nav-link logo-img">
+          <img src="images/LogoImg.svg" alt="" srcset="" />
+        </a>
+        <a href="index.html" class="nav-link dashboard-link">
+          <img src="images/Dashboard.svg" alt="" srcset="" />
+        </a>
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="masterDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Master.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab master-dropdown"
+            aria-labelledby="masterDropdown"
+          >
+            <li><a class="dropdown-item" href="location.html">Location</a></li>
+            <li>
+              <a
+                class="dropdown-item dropdown-item-divider"
+                href="department.html"
+                >Department</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="area.html"
+                >Area</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="jobrole.html"
+                >Job Role</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Training Type</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Content Type</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Designation</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="usersDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Users.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab user-dropdown"
+            aria-labelledby="usersDropdown"
+          >
+            <li><a class="dropdown-item" href="#subitem1">Employee</a></li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Workflow</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="trainingDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Training.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab training-dropdown"
+            aria-labelledby="trainingDropdown"
+          >
+            <li><a class="dropdown-item" href="#subitem1">Training</a></li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Training Schedule</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Job Role Mapping</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="contentDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Content.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab content-dropdown"
+            aria-labelledby="contentDropdown"
+          >
+            <li>
+              <a class="dropdown-item" href="#subitem1">Content Library</a>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Question Bank</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Quiz</a
+              >
+            </li>
+          </ul>
+        </div>
+        <a href="#services" class="nav-link dashboard-link">
+          <img src="images/Reports.svg" alt="" srcset="" />
+        </a>
+
+        <a href="#services" class="nav-link dashboard-link">
+          <img src="images/Analytics.svg" alt="" srcset="" />
+        </a>
+        <a href="#home" class="nav-link dashboard-link">
+          <img src="images/Notification.svg" alt="" srcset="" />
+        </a>
+
+        <div class="dropdown dropend relative custom-tabs-container">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="settingDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Setting.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab setting-dropdown"
+            aria-labelledby="settingDropdown"
+          >
+            <li><a class="dropdown-item" href="#subitem1">User Role</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <h3>Content Library</h3>
+        <div class="content-box p-4 z-0">
+          <div class="ms-3">
+            <img src="images/questiondetailIcon.svg" alt="" />
+            <span class="heading-color">Question Details</span>
+          </div>
+          <div class="container-fluid">
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <div class="dropdown location-dropdow-btn">
+                      <button
+                        class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <span class="button-text">Training Name</span>
+                        <span class="dropdown-icon dropdown-icon-n"></span>
+                      </button>
+                      <ul
+                        class="dropdown-menu location-dropdownmenu"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <!-- Search input with icon -->
+                        <li class="dropdown-header">
+                          <div class="search-container">
+                            <img
+                              src="images/searchImage.svg"
+                              class="search-icon img-fluid"
+                              alt=""
+                            />
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Search here..."
+                              aria-label="Search"
+                            />
+                          </div>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            >The Batter Station</a
+                          >
+                        </li>
+                        <li class="border-top border-1">
+                          <a class="dropdown-item" href="#"
+                            >Maple Street Kitchen</a
+                          >
+                        </li>
+                        <li class="border-top border-1">
+                          <a class="dropdown-item" href="#"
+                            >Fluffy Stack House</a
+                          >
+                        </li>
+                        <li class="border-top border-1">
+                          <a class="dropdown-item" href="#"
+                            >Golden Griddle Cake</a
+                          >
+                        </li>
+                        <li class="border-top border-1">
+                          <a class="dropdown-item" href="#"
+                            >The Pancake Parlour</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="mb-3">
+                    <div class="dropdown location-dropdow-btn">
+                      <button
+                        class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <span class="button-text">Topic</span>
+                        <span class="dropdown-icon dropdown-icon-n"></span>
+                      </button>
+                      <ul
+                        class="dropdown-menu location-dropdownmenu"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <!-- Search input with icon -->
+                        <li class="dropdown-header">
+                          <div class="search-container">
+                            <img
+                              src="images/searchImage.svg"
+                              class="search-icon img-fluid"
+                              alt=""
+                            />
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Search here..."
+                              aria-label="Search"
+                            />
+                          </div>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            >The Batter Station</a
+                          >
+                        </li>
+                        <li class="border-top border-1">
+                          <a class="dropdown-item" href="#"
+                            >Maple Street Kitchen</a
+                          >
+                        </li>
+                        <li class="border-top border-1">
+                          <a class="dropdown-item" href="#"
+                            >Fluffy Stack House</a
+                          >
+                        </li>
+                        <li class="border-top border-1">
+                          <a class="dropdown-item" href="#"
+                            >Golden Griddle Cake</a
+                          >
+                        </li>
+                        <li class="border-top border-1">
+                          <a class="dropdown-item" href="#"
+                            >The Pancake Parlour</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="mb-3">
+                    <div class="dropdown location-dropdow-btn">
+                      <button
+                        class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <span class="button-text">Question Type</span>
+                        <span class="dropdown-icon dropdown-icon-n"></span>
+                      </button>
+                      <ul
+                        class="dropdown-menu location-dropdownmenu"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <!-- Search input with icon -->
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            >The Batter Station</a
+                          >
+                        </li>
+                        <li class="border-top border-1">
+                          <a class="dropdown-item" href="#"
+                            >Maple Street Kitchen</a
+                          >
+                        </li>
+                        <li class="border-top border-1">
+                          <a class="dropdown-item" href="#"
+                            >Fluffy Stack House</a
+                          >
+                        </li>
+                        <li class="border-top border-1">
+                          <a class="dropdown-item" href="#"
+                            >Golden Griddle Cake</a
+                          >
+                        </li>
+                        <li class="border-top border-1">
+                          <a class="dropdown-item" href="#"
+                            >The Pancake Parlour</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center gap-4 my-3">
+                  <button
+                    data-bs-toggle="collapse"
+                    href="#collapseExample"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                    class="btn-save"
+                  >
+                    Add Question
+                  </button>
+                  <button type="button" class="btn-cancel">Cancel</button>
+                </div>
+                <div class="collapse" id="collapseExample">
+                  <div class="question-container">
+                    <div class="row mt-0">
+                      <!-- Left Column: Question and Dropdowns -->
+                      <div class="col-md-12 px-0">
+                        <div class="header-container d-flex align-items-center justify-content-between">
+                          <div class="d-flex align-items-center gap-2">
+                            <img src="images/questionfillIcon.svg" alt="" class="me-2" />
+                            <h5 class="mb-0">Question 1</h5>
+                            <div class="dropdowns-container d-flex gap-3">
+                              <div class="dropdown difflevel-dropdow-btn">
+                                <button
+                                  class="btn dropdown-toggle w-100 difflevel-btn"
+                                  type="button"
+                                  id="dropdownMenuButton"
+                                  data-bs-toggle="dropdown"
+                                  aria-expanded="false"
+                                >
+                                  <span class="button-text">Difficulty Level</span>
+                                  <span class="dropdown-icon dropdown-icon-n"></span>
+                                </button>
+                                <ul
+                                  class="dropdown-menu location-dropdownmenu"
+                                  aria-labelledby="dropdownMenuButton"
+                                >
+                                  <li class="dropdown-header">
+                                    <div class="search-container">
+                                      <img
+                                        src="images/searchImage.svg"
+                                        class="search-icon img-fluid"
+                                        alt=""
+                                      />
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Search here..."
+                                        aria-label="Search"
+                                      />
+                                    </div>
+                                  </li>
+                                  <li><a class="dropdown-item" href="#">The Batter Station</a></li>
+                                  <li class="border-top border-1">
+                                    <a class="dropdown-item" href="#">Maple Street Kitchen</a>
+                                  </li>
+                                  <li class="border-top border-1">
+                                    <a class="dropdown-item" href="#">Fluffy Stack House</a>
+                                  </li>
+                                  <li class="border-top border-1">
+                                    <a class="dropdown-item" href="#">Golden Griddle Cake</a>
+                                  </li>
+                                  <li class="border-top border-1">
+                                    <a class="dropdown-item" href="#">The Pancake Parlour</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="dropdown difflevel-dropdow-btn">
+                                <button
+                                  class="btn dropdown-toggle w-100 difflevel-btn"
+                                  type="button"
+                                  id="dropdownMenuButton"
+                                  data-bs-toggle="dropdown"
+                                  aria-expanded="false"
+                                >
+                                  <span class="button-text">Language</span>
+                                  <span class="dropdown-icon dropdown-icon-n"></span>
+                                </button>
+                                <ul
+                                  class="dropdown-menu location-dropdownmenu"
+                                  aria-labelledby="dropdownMenuButton"
+                                >
+                                  <li class="dropdown-header">
+                                    <div class="search-container">
+                                      <img
+                                        src="images/searchImage.svg"
+                                        class="search-icon img-fluid"
+                                        alt=""
+                                      />
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Search here..."
+                                        aria-label="Search"
+                                      />
+                                    </div>
+                                  </li>
+                                  <li><a class="dropdown-item" href="#">The Batter Station</a></li>
+                                  <li class="border-top border-1">
+                                    <a class="dropdown-item" href="#">Maple Street Kitchen</a>
+                                  </li>
+                                  <li class="border-top border-1">
+                                    <a class="dropdown-item" href="#">Fluffy Stack House</a>
+                                  </li>
+                                  <li class="border-top border-1">
+                                    <a class="dropdown-item" href="#">Golden Griddle Cake</a>
+                                  </li>
+                                  <li class="border-top border-1">
+                                    <a class="dropdown-item" href="#">The Pancake Parlour</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="action-buttons d-flex flex-row align-items-center">
+                            <button class="btn p-0 mb-2" title="Move Up">
+                              <img src="images/uparrowIcon.svg" alt="" />
+                            </button>
+                            <button class="btn p-0 mb-2" title="Move Down">
+                              <img src="images/downarrowIcon.svg" alt="" />
+                            </button>
+                            <button class="btn p-0 mb-2" title="Delete">
+                              <img src="images/deletequesIcon.svg" alt="" />
+                            </button>
+                            <button class="p-0 mark-btn mb-2" title="Mark">Mark</button>
+                          </div>
+                        </div>    
+                      </div>
+                    </div>
+                    <div class="p-3">
+                      <div class="form-group mt-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Question Title"
+                        />
+                      </div>
+                  
+                      <div class="form-check mt-2">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="addImage"
+                        />
+                        <label
+                          class="form-check-label addimg-font"
+                          for="addImage"
+                          >Add Image</label
+                        >
+                      </div>
+                  
+                      <div class="options-container">
+                        <p class="mb-0">Answers</p>
+                        <div class="option-input">
+                          <input type="radio" name="options" id="optionA" />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Option A"
+                          />
+                          <img src="images/optcloseIcon.svg" alt="" />
+                        </div>
+                        <div class="option-input">
+                          <input type="radio" name="options" id="optionB" />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Option B"
+                          />
+                          <img src="images/optcloseIcon.svg" alt="" />
+                        </div>
+                        <div class="option-input">
+                          <input type="radio" name="options" id="optionC" />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Option C"
+                          />
+                          <img src="images/optcloseIcon.svg" alt="" />
+                        </div>
+                        <div class="option-input">
+                          <input type="radio" name="options" id="optionD" />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Option D"
+                          />
+                          <img src="images/optcloseIcon.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="floating-label-inline content-textarea">
+                        <textarea
+                          type="text"
+                          id="description"
+                          placeholder=" "
+                          required
+                          rows="12"
+                        ></textarea>
+                        <label for="phone" class="textarea-label">Answer</label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="true"
+                          name="answer"
+                          value="True"
+                        />
+                        <label for="True" class="me-1">True</label>
+                  
+                        <input
+                          type="radio"
+                          id="false"
+                          name="answer"
+                          value="False"
+                        />
+                        <label for="False">False</label>
+                      </div>
+                      <div class="d-flex justify-content-center gap-4 my-3">
+                        <button type="submit" class="btn-save">
+                          Save & Next
+                        </button>
+                        <button type="button" class="btn-cancel">Cancel</button>
+                        <button type="submit" class="btn-save">Save</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Start -->
+    <div
+      class="modal fade"
+      id="deleteModal"
+      tabindex="-1"
+      aria-labelledby="deleteModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-header border-bottom-0 pb-0 d-flex justify-content-center"
+          >
+            <h6 class="modal-title" id="deleteModalLabel">
+              <img src="images/DeleteModalicon.svg" alt="" />
+            </h6>
+          </div>
+          <div class="modal-body p-0 mt-1">
+            <h4 class="text-danger text-center mb-0">Delete Area</h4>
+            <p class="text-center mb-0">
+              Are you sure you want to delete this area?
+            </p>
+          </div>
+          <div class="modal-footer border-top-0 d-flex justify-content-center">
+            <button type="button" class="btn btn-danger modal-delete-btn">
+              Delete
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary modal-cancel-btn"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal End -->
+
+    <script>
+      document.querySelectorAll(".sidebar a").forEach((link) => {
+        link.addEventListener("click", function () {
+          // Remove active class from all links
+          document.querySelectorAll(".sidebar a").forEach((link) => {
+            link.classList.remove("active");
+          });
+          // Add active class to the clicked link
+          this.classList.add("active");
+        });
+      });
+    </script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
