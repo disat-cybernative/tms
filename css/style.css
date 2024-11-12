@@ -81,9 +81,6 @@ body {
   height: 50px;
   transition: filter 0.3s ease;
 }
-/* .drop-sidebar {
-  transform: translate(83.5px, -90px) !important;
-} */
 /* Sidebar CSS End */
 
 .main-content {
@@ -102,6 +99,16 @@ body {
 }
 .dropend .dropdown-toggle::after {
   display: none !important;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.4em solid !important;
+  border-right: 0.4em solid transparent !important;
+  border-bottom: 0 !important;
+  border-left: 0.4em solid transparent !important;
 }
 a.nav-link.logo-img {
   margin: 0px 0px;
@@ -340,6 +347,14 @@ div.dt-container select.dt-input {
   height: 40px;
   background-color: white;
   color: black;
+  border-radius: 7px;
+  border: 1px solid grey;
+}
+.add-qusbtn {
+  width: 100%;
+  height: 40px;
+  background-color: #4c416b;
+  color: white;
   border-radius: 7px;
   border: 1px solid grey;
 }
@@ -1396,7 +1411,11 @@ img.img-fluid.arrow-img {
   border-radius: 8px;
   border: 1px solid #e2e0eb;
 }
-
+.add-question-container {
+  border-radius: 8px;
+  border: 1px solid #e2e0eb;
+  margin: 12px;
+}
 .header-container {
   display: flex;
   align-items: center;
@@ -1452,10 +1471,35 @@ img.img-fluid.arrow-img {
 }
 /* Add Question CSS End */
 
-.training-hover span:hover,.jobrole-hover span:hover{
-  color:#b9135b; 
+.training-hover span:hover,
+.jobrole-hover span:hover {
+  color: #b9135b;
 }
 
+.question-head-font {
+  font-family: Assistant;
+  font-weight: 700;
+  color: #484b51;
+  font-size: 20px;
+}
+.question-font {
+  font-family: Assistant;
+  font-size: 18px;
+  font-weight: 600;
+  color: #484b51;
+}
+.mark-font {
+  font-family: Asap;
+  font-size: 16px;
+  font-weight: 400;
+  color: #484b51;
+}
+.table-heading-font {
+  font-family: Assistant;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1b1c1e;
+}
 /* Calender CSS Start */
 
 /* Calender CSS End */
