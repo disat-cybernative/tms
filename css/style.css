@@ -32,7 +32,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
 }
 .sidebar a {
   color: #343a40;
@@ -42,8 +41,6 @@ body {
 }
 
 .sidebar a.dashboard-link {
-  /* width: 55px;
-  height: 55px; */
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -76,8 +73,6 @@ body {
 
 /* Default image style */
 .sidebar a img {
-  /* width: auto;
-  height: auto; */
   height: 50px;
   transition: filter 0.3s ease;
 }
@@ -131,8 +126,8 @@ table {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%; /* Ensures the table adapts to the container */
-  table-layout: auto; /* Allows columns to adjust based on content */
+  width: 100%; 
+  table-layout: auto; 
 }
 
 table thead th:first-child {
@@ -167,7 +162,6 @@ table.dataTable {
 table tbody tr td,
 table thead tr th {
   font-size: 14px;
-  /* padding: 15px !important; */
 }
 table#dataTable tbody td,
 table#dataTable thead th {
@@ -305,8 +299,8 @@ input:checked + .status-slider:before {
 }
 
 .location-drop .dropdown-item {
-  padding: 0px 10px; /* Adjust padding inside items to reduce height */
-  font-size: 14px; /* Optionally decrease font size to reduce height */
+  padding: 0px 10px;
+  font-size: 14px; 
 }
 .btn-width {
   width: 137px;
@@ -330,7 +324,7 @@ div.dt-container select.dt-input {
   padding: 3px !important;
 }
 .form-group input::placeholder {
-  color: #6c757d; /* Default placeholder color */
+  color: #6c757d; 
 }
 
 /* Button CSS Start */
@@ -417,7 +411,7 @@ div.dt-container select.dt-input {
   margin-right: 10px;
 }
 .location-dropdownmenu {
-  width: 100%; /* Ensures full width of the dropdown menu */
+  width: 100%; 
   max-height: 155px;
   overflow-y: auto;
 }
@@ -468,10 +462,6 @@ div.dt-container select.dt-input {
   width: 100%;
 }
 
-/* .dropdown-divider {
-  margin: 0;
-} */
-
 .locat-btn::after {
   right: 9px;
   top: 17px;
@@ -502,7 +492,6 @@ div.dt-container .dt-paging .dt-paging-button.current:hover {
   width: 100%;
   padding: 8px 15px 8px 40px;
   border-radius: 8px;
-  /* border: 1px solid #ddd; */
   background: #f5f5f5;
   height: 40px;
 }
@@ -523,9 +512,8 @@ div.dt-container .dt-paging .dt-paging-button.current:hover {
 }
 .locate-dropbox .search-container input[type="text"] {
   width: 100%;
-  padding: 8px 15px 8px 40px; /* Adjust padding for input text */
+  padding: 8px 15px 8px 40px; 
   border-radius: 8px;
-  /* border: 1px solid #ddd; */
   background: #f5f5f5;
   height: 32px;
 }
@@ -541,7 +529,7 @@ div.dt-container .dt-paging .dt-paging-button.current:hover {
 .divider {
   width: 1px;
   height: 30px;
-  background-color: #e5e7eb; /* Tailwind's gray-200 */
+  background-color: #e5e7eb; 
   margin: 0 10px;
 }
 
@@ -561,6 +549,7 @@ div.dt-container .dt-paging .dt-paging-button.current:hover {
   border-color: #fff transparent transparent transparent;
 }
 /* New css Start */
+
 /* Vertically center dropdown content */
 .dropdown-menu {
   display: flex;
@@ -568,7 +557,6 @@ div.dt-container .dt-paging .dt-paging-button.current:hover {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  /* transform: translate(82.5px, 0px) !important; */
 }
 
 /* Back arrow styling */
@@ -580,9 +568,10 @@ div.dt-container .dt-paging .dt-paging-button.current:hover {
 }
 
 .back-arrow img {
-  width: 16px; /* Adjust arrow size */
+  width: 16px; 
   height: auto;
 }
+
 /* Pagination Start */
 .page-item.active .page-link,
 .page-item.active .page-link:hover {
@@ -591,6 +580,7 @@ div.dt-container .dt-paging .dt-paging-button.current:hover {
   border-radius: 4px;
   color: white !important;
 }
+
 /* Style for non-active page links */
 .page-link {
   background-color: white;
@@ -780,6 +770,10 @@ ul.dropdown-menu.drop-sidebar.active-tab.show.setting-dropdown {
   color: red;
   padding-left: 4px;
 }
+.required-asterisk{
+  color: red; 
+  margin-left: 2px;
+}
 .drop-color {
   color: #94979e !important;
   font-size: 14px !important;
@@ -865,7 +859,7 @@ ul.dropdown-menu.drop-sidebar.active-tab.show.setting-dropdown {
   max-height: 200px;
   width: 363px;
   overflow-y: auto;
-  padding: 10px; /* Adding padding inside the dropdown */
+  padding: 10px; 
 }
 .menu-font {
   font-size: 14px;
@@ -946,11 +940,11 @@ li:hover span {
 }
 .sidebar a.profile-img {
   display: flex;
-  justify-content: center; /* Centers the image horizontally */
-  align-items: center; /* Centers the image vertically */
+  justify-content: center; 
+  align-items: center; 
   position: absolute;
-  bottom: 0; /* Keeps the image at the bottom */
-  width: 100%; /* Ensures the image container takes up full width of sidebar */
+  bottom: 0; 
+  width: 100%; 
 }
 
 .sidebar a.profile-img img {
@@ -1029,11 +1023,11 @@ li:hover span {
 }
 
 .minus-icon {
-  left: 10px; /* Position of minus icon */
+  left: 10px; 
 }
 
 .plus-icon {
-  right: 10px; /* Position of plus icon */
+  right: 10px; 
 }
 .minus-icon img,
 .plus-icon img {
@@ -1075,7 +1069,7 @@ li:hover span {
   border-radius: 12px;
   font-weight: bold;
   border: 1px solid #dee2e6;
-  height: 242px; /* Fixed height for equal box size */
+  height: 242px; 
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -1094,7 +1088,7 @@ li:hover span {
   font-weight: 600;
   font-size: 16px;
   color: #61646b;
-  margin-bottom: auto; /* Pushes p element upwards */
+  margin-bottom: auto; 
 }
 
 .upload-area {
@@ -1122,9 +1116,6 @@ li:hover span {
 .upload-area.quiz-bkg {
   background-color: #e6fff9;
 }
-/* .upload-area:hover {
-  background-color: #f8f9fa;
-} */
 
 .upload-area input {
   display: none;
@@ -1154,7 +1145,7 @@ li:hover span {
   border-radius: 8px;
   background-color: #fff;
   padding: 15px;
-  height: 350px; /* Set a fixed height */
+  height: 350px; 
   display: flex;
   flex-direction: column;
 }
@@ -1251,7 +1242,7 @@ img.img-fluid.arrow-img {
   border-bottom: 1px solid #b9135b !important;
   color: #b9135b !important;
   background-color: transparent !important;
-  position: relative !important; /* Position for the pseudo-element */
+  position: relative !important; 
 }
 .systemusertab .nav-link.active::after {
   content: "▼";
@@ -1442,7 +1433,7 @@ img.img-fluid.arrow-img {
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Aligns Question Title & Buttons */
+  justify-content: space-between; 
   background-color: #faf9ff;
   border: 1px solid #e2e0eb;
   padding: 10px;
@@ -1523,10 +1514,6 @@ img.img-fluid.arrow-img {
   font-weight: 700;
   color: #1b1c1e;
 }
-/* Calender CSS Start */
-
-/* Calender CSS End */
-
 /* Calender Expand Modal CSS Start */
 
 /* Triangle Arrow */
@@ -1636,6 +1623,7 @@ img.img-fluid.arrow-img {
   color: #484b51;
 }
 /* Calender Expand Modal CSS End */
+
 /* Additional custom styles */
 .role-steps {
   display: flex;
