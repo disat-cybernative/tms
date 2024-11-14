@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Family CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Assistant:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="d-flex">
+      <!-- Sidebar -->
+      <nav class="sidebar d-flex p-3 z-1">
+        <a href="#" class="nav-link logo-img mb-1">
+          <img src="images/LogoImg.svg" alt="" srcset="" />
+        </a>
+        <a href="index.html" class="nav-link dashboard-link mb-1">
+          <img src="images/Dashboard.svg" alt="" srcset="" />
+        </a>
+        <div class="dropdown dropend relative custom-tabs-container mb-1">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="masterDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Master.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab master-dropdown"
+            aria-labelledby="masterDropdown"
+          >
+            <li><a class="dropdown-item" href="location.html">Location</a></li>
+            <li>
+              <a
+                class="dropdown-item dropdown-item-divider"
+                href="department.html"
+                >Department</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="area.html"
+                >Area</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="jobrole.html"
+                >Job Role</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item dropdown-item-divider"
+                href="trainingtype.html"
+                >Training Type</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Content Type</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Designation</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown dropend relative custom-tabs-container mb-1">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="usersDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Users.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab user-dropdown"
+            aria-labelledby="usersDropdown"
+          >
+            <li><a class="dropdown-item" href="#subitem1">Employee</a></li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Workflow</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown dropend relative custom-tabs-container mb-1">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="trainingDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Training.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab training-dropdown"
+            aria-labelledby="trainingDropdown"
+          >
+            <li><a class="dropdown-item" href="#subitem1">Training</a></li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Training Schedule</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem3"
+                >Job Role Mapping</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown dropend relative custom-tabs-container mb-1">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="contentDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Content.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab content-dropdown"
+            aria-labelledby="contentDropdown"
+          >
+            <li>
+              <a class="dropdown-item" href="#subitem1">Content Library</a>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Question Bank</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-divider" href="#subitem2"
+                >Quiz</a
+              >
+            </li>
+          </ul>
+        </div>
+        <a href="#services" class="nav-link dashboard-link mb-1">
+          <img src="images/Reports.svg" alt="" srcset="" />
+        </a>
+
+        <a href="#services" class="nav-link dashboard-link mb-1">
+          <img src="images/Analytics.svg" alt="" srcset="" />
+        </a>
+        <a href="#home" class="nav-link dashboard-link mb-1">
+          <img src="images/Notification.svg" alt="" srcset="" />
+        </a>
+
+        <div class="dropdown dropend relative custom-tabs-container mb-1">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle dashboard-link"
+            id="settingDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="images/Setting.svg" alt="" srcset="" />
+          </a>
+          <ul
+            class="dropdown-menu drop-sidebar active-tab setting-dropdown"
+            aria-labelledby="settingDropdown"
+          >
+            <li><a class="dropdown-item" href="#subitem1">User Role</a></li>
+          </ul>
+        </div>
+        <a href="#home" class="nav-link profile-img">
+          <img src="images/profileImage.svg" alt="" srcset="" />
+        </a>
+      </nav>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <h3>System User & Roles</h3>
+        <div>
+          <ul class="nav nav-tabs systemusertab" id="systemuserTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link active"
+                id="rolesTab"
+                data-bs-toggle="tab"
+                href="#roletab"
+                role="tab"
+                aria-controls="roletab"
+                aria-selected="true"
+                >Roles</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="systemuserTab"
+                data-bs-toggle="tab"
+                href="#systemusertab"
+                role="tab"
+                aria-controls="systemusertab"
+                aria-selected="false"
+                >System Users</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="content-box p-4 z-0">
+          <!-- Role Steps -->
+          <div class="role-steps">
+            <div class="role-step start-rolestep active">
+              <span class="circle">
+                <img src="images/whiterightArrow.svg" alt="" />
+              </span>
+              <span class="role-font">Role Details</span>
+            </div>
+            <div class="role-line"></div>
+            <div class="role-step end-rolestep">
+              <span class="circle">
+                <span class="small-circle"></span>
+              </span>
+              <span class="role-font">Role Access</span>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <div class="floating-label-inline">
+                      <input type="text" id="name" placeholder=" " required />
+                      <label for="name" class="required-label"
+                        >User Role Name</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <div class="floating-label-inline">
+                      <input type="text" id="name" placeholder=" " required />
+                      <label for="name">Description</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center gap-4 my-4">
+                  <button
+                    data-bs-toggle="collapse"
+                    href="#collapseExample"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                    class="btn-save"
+                  >
+                    Next
+                  </button>
+                  <button type="button" class="btn-cancel">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Table Start -->
+          <div class="collapse" id="collapseExample">
+            <div class="">
+              <table class="userrole-table">
+                <thead>
+                  <tr>
+                    <th>Master</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="">
+                    <td>Location</td>
+                    <td>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Add</span>
+                    </td>
+                    <td>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Edit</span>
+                    </td>
+                    <td class="text-left">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">View</span>
+                    </td>
+                    <td class="text-left">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Delete</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Department</td>
+                    <td>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Add</span>
+                    </td>
+                    <td>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Edit</span>
+                    </td>
+                    <td class="text-left">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">View</span>
+                    </td>
+                    <td class="text-left">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Delete</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Area</td>
+                    <td>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Add</span>
+                    </td>
+                    <td>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Edit</span>
+                    </td>
+                    <td class="text-left">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">View</span>
+                    </td>
+                    <td class="text-left">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Delete</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Job Role</td>
+                    <td>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Add</span>
+                    </td>
+                    <td>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Edit</span>
+                    </td>
+                    <td class="text-left">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">View</span>
+                    </td>
+                    <td class="text-left">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Delete</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Training Type</td>
+                    <td>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Add</span>
+                    </td>
+                    <td>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Edit</span>
+                    </td>
+                    <td class="text-left">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">View</span>
+                    </td>
+                    <td class="text-left">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Delete</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Content Type</td>
+                    <td>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Add</span>
+                    </td>
+                    <td>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Edit</span>
+                    </td>
+                    <td class="text-left">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">View</span>
+                    </td>
+                    <td class="text-left">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Delete</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Designation</td>
+                    <td>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Add</span>
+                    </td>
+                    <td>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Edit</span>
+                    </td>
+                    <td class="text-left">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">View</span>
+                    </td>
+                    <td class="text-left">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <span class="mx-2">Delete</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Table End -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -371,6 +371,9 @@ div.dt-container select.dt-input {
 .location-dropdown.job-dropdown {
   margin-right: 0px !important;
 }
+.dropdownbtn-border {
+  border: 1px solid #e4e5e7 !important;
+}
 /* Prevent background color change on hover */
 .location-dropdown:hover,
 .location-dropdown:focus,
@@ -1244,7 +1247,27 @@ img.img-fluid.arrow-img {
   color: #000000 !important;
   background-color: transparent !important;
 }
-
+.systemusertab .nav-link.active {
+  border-bottom: 1px solid #b9135b !important;
+  color: #b9135b !important;
+  background-color: transparent !important;
+  position: relative !important; /* Position for the pseudo-element */
+}
+.systemusertab .nav-link.active::after {
+  content: "▼";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #b9135b;
+  font-size: 10px;
+}
+.systemusertab li a {
+  font-family: Assistant;
+  font-size: 18px;
+  font-weight: 600;
+  color: #b9135b;
+}
 .nav-tabs .nav-link {
   border: none !important;
   color: #333;
@@ -1503,3 +1526,200 @@ img.img-fluid.arrow-img {
 /* Calender CSS Start */
 
 /* Calender CSS End */
+
+/* Calender Expand Modal CSS Start */
+
+/* Triangle Arrow */
+.triangle-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  z-index: 1;
+  rotate: 270deg;
+}
+
+/* Ensure the modal positioning works */
+.calendarexpand-modal {
+  position: relative;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+/* Modal content styling */
+.modal-content {
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* Event title styling */
+.event-title {
+  color: #61646b;
+  font-family: Assistant;
+  font-size: 22px;
+  font-weight: 700;
+}
+.dayfont {
+  font-family: Assistant;
+  font-size: 16px;
+  font-weight: 600;
+  color: #94979e;
+}
+.starbrd-color {
+  border: 1px solid #b9135b;
+}
+.endbrd-color {
+  border: 1px solid #4caf50;
+}
+.sepbrd-color {
+  border: 1px solid #94979e;
+}
+.eventtitle-brd {
+  border-bottom: 1px solid #e4e5e7;
+}
+.enddate-border {
+  border-bottom: 1px solid #e4e5e7;
+}
+/* Start Date Badge */
+.startdate-bg {
+  background: #fde8f1;
+  padding: 5px;
+  color: #b9135b;
+  font-family: Assistant;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* End Date Badge */
+.enddate-bg {
+  background: #e2ffe3;
+  padding: 5px;
+  color: #4caf50;
+  font-family: Assistant;
+  font-size: 18px;
+  font-weight: 600;
+}
+.calendermodal-bg {
+  background-color: #f0eff5;
+  padding: 8px;
+}
+.modal-head {
+  font-family: Assistant;
+  font-size: 20px;
+  font-weight: 700;
+  color: #303236;
+  margin-bottom: 0px;
+}
+/* Trainer Info Styling */
+.trainer-info img {
+  width: 44px;
+  height: 44px;
+}
+.trainer-name {
+  font-family: Assistant;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1b1c1e;
+}
+.trainerdub-name {
+  font-family: Assistant;
+  font-size: 18px;
+  font-weight: 600;
+  color: #484b51;
+}
+/* Calender Expand Modal CSS End */
+/* Additional custom styles */
+.role-steps {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+.role-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #6c757d;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+.start-rolestep {
+  margin-right: 22px;
+}
+.end-rolestep {
+  margin-left: 94px;
+}
+.role-step.active {
+  color: #6f42c1;
+}
+.role-font {
+  font-family: Assistant;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1b1c1e;
+}
+.role-step.active .circle {
+  background-color: #4a436c;
+}
+.role-step .circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 0.5px solid #4a436c;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 5px;
+}
+.role-step .circle .small-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #4a436c;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.role-line {
+  position: absolute;
+  width: 180px;
+  height: 2px;
+  background-color: #e4e5e7;
+  margin: 10px 10px;
+}
+.userrole-table {
+  padding: 10px;
+  overflow-x: auto;
+  width: 100%;
+}
+.userrole-table thead {
+  background-color: #f0eff5;
+}
+.userrole-table thead th {
+  padding: 10px;
+  font-family: Assistant;
+  font-size: 20px;
+  font-weight: 700;
+  color: #484b51;
+}
+.userrole-table tbody td {
+  padding: 10px;
+  font-family: Asap;
+  font-size: 16px;
+  font-weight: 400;
+  color: #484b51;
+}
+.userrole-table tbody td input.form-check-input:checked {
+  background-color: #b9135b !important;
+  border-color: #b9135b !important;
+}

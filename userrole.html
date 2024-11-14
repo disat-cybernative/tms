@@ -209,110 +209,305 @@
 
       <!-- Main Content -->
       <div class="main-content">
-        <h3>Manage User Roles</h3>
+        <h3>System User & Roles</h3>
+        <div>
+          <ul class="nav nav-tabs systemusertab" id="systemuserTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link active"
+                id="rolesTab"
+                data-bs-toggle="tab"
+                href="#roletab"
+                role="tab"
+                aria-controls="roletab"
+                aria-selected="true"
+                >Roles</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="systemuserTab"
+                data-bs-toggle="tab"
+                href="#systemusertab"
+                role="tab"
+                aria-controls="systemusertab"
+                aria-selected="false"
+                >System Users</a
+              >
+            </li>
+          </ul>
+        </div>
         <div class="content-box p-4 z-0">
           <div class="container-fluid">
-            <!-- Table Start -->
-            <div class="z-1 position-relative mb-2">
+            <div class="tab-content mt-3" id="systemuserTabsContent">
               <div
-                class="row m-0 g-2 align-items-center justify-content-between"
-                style="max-width: 100%"
+                class="tab-pane fade show active"
+                id="roletab"
+                role="tabpanel"
+                aria-labelledby="rolesTab"
               >
-                <!-- Search box -->
-                <div class="col-md-4">
-                  <div class="search-container d-flex align-items-center">
-                    <img
-                      src="images/searchImage.svg"
-                      class="search-icon img-fluid"
-                      alt=""
-                    />
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Search here..."
-                      aria-label="Search"
-                    />
+                <div class="z-1 position-relative mb-2">
+                  <div
+                    class="row m-0 g-2 align-items-center justify-content-between"
+                    style="max-width: 100%"
+                  >
+                    <!-- Search box -->
+                    <div class="col-md-4">
+                      <div class="search-container d-flex align-items-center">
+                        <img
+                          src="images/searchImage.svg"
+                          class="search-icon img-fluid"
+                          alt=""
+                        />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Search here..."
+                          aria-label="Search"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Dropdown and Add Department Button -->
+                    <div class="col-md-8 d-flex justify-content-md-end">
+                      <div class="btn-group dropdown float-end">
+                        <a
+                          href="adduserrole.html"
+                          type="button"
+                          class="z-0 btn btn-location btn-border"
+                        >
+                          Add User Roles
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <div class="table-responsive">
+                  <table id="dataTable" class="table" style="width: 100%">
+                    <thead>
+                      <tr>
+                        <th>User Role Name</th>
+                        <th>Created By</th>
+                        <th>Created On</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Super Admin</td>
+                        <td>Aarav Sharma</td>
+                        <td>15-01-2022</td>
+                        <td>
+                          <div class="d-flex">
+                            <a href="userroleaccess.html" title="Edit"
+                              ><img
+                                src="images/EditImage.svg"
+                                alt=""
+                                srcset=""
+                              />
+                            </a>
+                            <a href="" class="ms-2" title="View">
+                              <img
+                                src="images/ViewImage.svg"
+                                alt=""
+                                srcset=""
+                              />
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Super Admin</td>
+                        <td>Aarav Sharma</td>
+                        <td>15-01-2022</td>
+                        <td>
+                          <div class="d-flex">
+                            <a href="userroleaccess.html" title="Edit"
+                              ><img
+                                src="images/EditImage.svg"
+                                alt=""
+                                srcset=""
+                              />
+                            </a>
+                            <a href="" class="ms-2" title="View">
+                              <img
+                                src="images/ViewImage.svg"
+                                alt=""
+                                srcset=""
+                              />
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active">
+                        <a class="page-link active-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="systemusertab"
+                role="tabpanel"
+                aria-labelledby="systemuserTab"
+              >
+                <div class="z-1 position-relative mb-2">
+                  <div
+                    class="row m-0 g-2 align-items-center justify-content-between"
+                    style="max-width: 100%"
+                  >
+                    <!-- Search box -->
+                    <div class="col-md-4">
+                      <div class="search-container d-flex align-items-center">
+                        <img
+                          src="images/searchImage.svg"
+                          class="search-icon img-fluid"
+                          alt=""
+                        />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Search here..."
+                          aria-label="Search"
+                        />
+                      </div>
+                    </div>
 
-                <!-- Dropdown and Add Department Button -->
-                <div class="col-md-8 d-flex justify-content-md-end">
-                  <div class="btn-group dropdown float-end">
-                    <a
-                      href="adduserrole.html"
-                      type="button"
-                      class="z-0 btn btn-location btn-border"
-                    >
-                      Add User Roles
-                    </a>
+                    <!-- Dropdown and Add Department Button -->
+                    <div class="col-md-8 d-flex justify-content-md-end">
+                      <div class="btn-group dropdown float-end">
+                        <a
+                          href="addsystemuser.html"
+                          type="button"
+                          class="z-0 btn btn-location btn-border"
+                        >
+                          Add System User
+                        </a>
+                      </div>
+                    </div>
                   </div>
+                </div>
+                <div class="table-responsive">
+                  <table id="dataTable" class="table" style="width: 100%">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Aditi Mehta</td>
+                        <td>aditi@gmail.com</td>
+                        <td>8745963215</td>
+                        <td>Super Admin</td>
+                        <td>
+                          <div class="d-flex">
+                            <a href="userroleaccess.html" title="Edit"
+                              ><img
+                                src="images/EditImage.svg"
+                                alt=""
+                                srcset=""
+                              />
+                            </a>
+                            <a href="" class="ms-2" title="View">
+                              <img
+                                src="images/ViewImage.svg"
+                                alt=""
+                                srcset=""
+                              />
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Aditi Mehta</td>
+                        <td>aditi@gmail.com</td>
+                        <td>8745963215</td>
+                        <td>Super Admin</td>
+                        <td>
+                          <div class="d-flex">
+                            <a href="userroleaccess.html" title="Edit"
+                              ><img
+                                src="images/EditImage.svg"
+                                alt=""
+                                srcset=""
+                              />
+                            </a>
+                            <a href="" class="ms-2" title="View">
+                              <img
+                                src="images/ViewImage.svg"
+                                alt=""
+                                srcset=""
+                              />
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active">
+                        <a class="page-link active-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
                 </div>
               </div>
             </div>
-            <div class="table-responsive">
-              <table id="dataTable" class="table" style="width: 100%">
-                <thead>
-                  <tr>
-                    <th>User Role Name</th>
-                    <th>Created By</th>
-                    <th>Created On</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Super Admin</td>
-                    <td>Aarav Sharma</td>
-                    <td>15-01-2022</td>
-                    <td>
-                      <div class="d-flex">
-                        <a href="#" class="text-primary ms-2" title="Edit"
-                          ><img src="images/EditImage.svg" alt="" srcset="" />
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Super Admin</td>
-                    <td>Aarav Sharma</td>
-                    <td>15-01-2022</td>
-                    <td>
-                      <div class="d-flex">
-                        <a href="#" class="text-primary ms-2" title="Edit"
-                          ><img src="images/EditImage.svg" alt="" srcset="" />
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item active">
-                    <a class="page-link active-link" href="#">2</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">4</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
           </div>
-          
         </div>
       </div>
     </div>
-    
+
     <!-- Bootstrap JS and Popper.js -->
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
