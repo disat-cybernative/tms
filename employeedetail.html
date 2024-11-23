@@ -211,20 +211,20 @@
             <p class="mb-2 headbody-font">SOP2001</p>
             <div class="button-group">
               <button
-                class="desig-bg-color me-2"
-                data-bs-toggle="modal"
-                data-bs-target="#designationModal"
-              >
-                Change Designation
-                <img src="images/designrightArrIcon.svg" class="ms-2" alt="" />
-              </button>
-              <button
                 class="depart-bg-color me-2"
                 data-bs-toggle="modal"
                 data-bs-target="#departmentModal"
               >
                 Change Department
                 <img src="images/departrightArrIcon.svg" class="ms-2" alt="" />
+              </button>
+              <button
+                class="desig-bg-color me-2"
+                data-bs-toggle="modal"
+                data-bs-target="#designationModal"
+              >
+                Change Designation
+                <img src="images/designrightArrIcon.svg" class="ms-2" alt="" />
               </button>
               <button
                 class="train-bg-color"
@@ -239,7 +239,7 @@
         </div>
 
         <!-- Tabs Section -->
-        <ul class="nav nav-tabs mt-4" id="employeeTabs" role="tablist">
+        <ul class="nav nav-tabs tab-font mt-4" id="employeeTabs" role="tablist">
           <li class="nav-item" role="presentation">
             <a
               class="nav-link active"
@@ -296,7 +296,11 @@
                       alt=""
                     />
                     <h5 class="mb-0">Personal Details</h5>
-                    <button class="btn btn-link ms-auto">
+                    <button
+                      class="btn btn-link ms-auto"
+                      data-bs-toggle="modal"
+                      data-bs-target="#personaldetailModal"
+                    >
                       <img src="images/editdetailIcon.svg" alt="" />
                     </button>
                   </div>
@@ -345,7 +349,11 @@
                       alt=""
                     />
                     <h5 class="mb-0">Employee Details</h5>
-                    <button class="btn btn-link ms-auto">
+                    <button
+                      class="btn btn-link ms-auto"
+                      data-bs-toggle="modal"
+                      data-bs-target="#employeedetailModal"
+                    >
                       <img src="images/editdetailIcon.svg" alt="" />
                     </button>
                   </div>
@@ -398,7 +406,11 @@
                   <div class="card-header d-flex align-items-center">
                     <img src="images/addDetailIcon.svg" class="me-2" alt="" />
                     <h5 class="mb-0">Address Details</h5>
-                    <button class="btn btn-link ms-auto">
+                    <button
+                      class="btn btn-link ms-auto"
+                      data-bs-toggle="modal"
+                      data-bs-target="#addressdetailModal"
+                    >
                       <img src="images/editdetailIcon.svg" alt="" />
                     </button>
                   </div>
@@ -543,7 +555,7 @@
       aria-labelledby="designationModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-md modal-dialog-centered">
         <div class="modal-content">
           <div
             class="modal-header border-bottom-0 pb-0 d-flex justify-content-start"
@@ -551,29 +563,31 @@
             <img src="images/employeedetailIcon.svg" alt="" />
             <h4 class="mx-2 emp-font">Employee Details</h4>
           </div>
-          <div class="modal-body pt-0">
-            <div class="row">
-              <div class="col-md-6">
+          <div class="modal-body py-0">
+            <div class="row mt-0">
+              <div class="col-md-12 my-2">
                 <div class="mb-3">
-                  <div class="floating-label-inline">
-                    <input type="text" id="name" placeholder=" " required />
-                    <label for="name" class="required-label"
-                      >Employee Code</label
-                    >
-                  </div>
+                  <p class="modal-body-header-font">
+                    Current Designation :
+                    <span>Production Manager</span>
+                  </p>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <div class="mb-3">
                   <div class="dropdown location-dropdow-btn">
                     <button
-                      class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
+                      class="btn dropdownbtn-border dropdownbtn-height dropdown-toggle w-100 locat-btn"
                       type="button"
                       id="dropdownMenuButton"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      <span class="button-text">Location</span>
+                      <span class="button-text"
+                        >New Designation<span class="required-asterisk"
+                          >*</span
+                        ></span
+                      >
                       <span class="dropdown-icon dropdown-icon-n"></span>
                     </button>
                     <ul
@@ -614,358 +628,6 @@
                       </li>
                     </ul>
                   </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <div class="dropdown location-dropdow-btn">
-                    <button
-                      class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <span class="button-text">Department</span>
-                      <span class="dropdown-icon dropdown-icon-n"></span>
-                    </button>
-                    <ul
-                      class="dropdown-menu location-dropdownmenu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <!-- Search input with icon -->
-                      <li class="dropdown-header">
-                        <div class="search-container">
-                          <img
-                            src="images/searchImage.svg"
-                            class="search-icon img-fluid"
-                            alt=""
-                          />
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Search here..."
-                            aria-label="Search"
-                          />
-                        </div>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">The Batter Station</a>
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#"
-                          >Maple Street Kitchen</a
-                        >
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#"
-                          >Golden Griddle Cake</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <div class="dropdown location-dropdow-btn">
-                    <button
-                      class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <span class="button-text">Area</span>
-                      <span class="dropdown-icon dropdown-icon-n"></span>
-                    </button>
-                    <ul
-                      class="dropdown-menu location-dropdownmenu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <!-- Search input with icon -->
-                      <li class="dropdown-header">
-                        <div class="search-container">
-                          <img
-                            src="images/searchImage.svg"
-                            class="search-icon img-fluid"
-                            alt=""
-                          />
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Search here..."
-                            aria-label="Search"
-                          />
-                        </div>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">The Batter Station</a>
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#"
-                          >Maple Street Kitchen</a
-                        >
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#"
-                          >Golden Griddle Cake</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <div class="dropdown location-dropdow-btn">
-                    <button
-                      class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <span class="button-text">Designation</span>
-                      <span class="dropdown-icon dropdown-icon-n"></span>
-                    </button>
-                    <ul
-                      class="dropdown-menu location-dropdownmenu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <!-- Search input with icon -->
-                      <li class="dropdown-header">
-                        <div class="search-container">
-                          <img
-                            src="images/searchImage.svg"
-                            class="search-icon img-fluid"
-                            alt=""
-                          />
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Search here..."
-                            aria-label="Search"
-                          />
-                        </div>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">The Batter Station</a>
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#"
-                          >Maple Street Kitchen</a
-                        >
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#"
-                          >Golden Griddle Cake</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <div class="dropdown location-dropdow-btn">
-                    <button
-                      class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <span class="button-text">Reporting Manager</span>
-                      <span class="dropdown-icon dropdown-icon-n"></span>
-                    </button>
-                    <ul
-                      class="dropdown-menu location-dropdownmenu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <!-- Search input with icon -->
-                      <li class="dropdown-header">
-                        <div class="search-container">
-                          <img
-                            src="images/searchImage.svg"
-                            class="search-icon img-fluid"
-                            alt=""
-                          />
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Search here..."
-                            aria-label="Search"
-                          />
-                        </div>
-                      </li>
-                      <li class="p-1">
-                        <div
-                          class="form-check d-flex justify-content-between menu-font px-4"
-                        >
-                          <div>
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="mapleStreetKitchen"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="mapleStreetKitchen"
-                            >
-                              Rahul Verma
-                            </label>
-                          </div>
-                          <div>
-                            <span>Product Manager</span>
-                          </div>
-                          <div>
-                            <span>SOP2001</span>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="p-1">
-                        <div
-                          class="form-check d-flex justify-content-between menu-font px-4"
-                        >
-                          <div>
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="mapleStreetKitchen"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="mapleStreetKitchen"
-                            >
-                              Rahul Verma
-                            </label>
-                          </div>
-                          <div>
-                            <span>Product Manager</span>
-                          </div>
-                          <div>
-                            <span>SOP2001</span>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="p-1">
-                        <div
-                          class="form-check d-flex justify-content-between menu-font px-4"
-                        >
-                          <div>
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="mapleStreetKitchen"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="mapleStreetKitchen"
-                            >
-                              Rahul Verma
-                            </label>
-                          </div>
-                          <div>
-                            <span>Product Manager</span>
-                          </div>
-                          <div>
-                            <span>SOP2001</span>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <div class="floating-label-inline">
-                    <input type="date" id="name" placeholder=" " required />
-                    <label for="phone" class="required-label"
-                      >Joining Date</label
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <div class="dropdown location-dropdow-btn">
-                    <button
-                      class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <span class="button-text">Timezone</span>
-                      <span class="dropdown-icon dropdown-icon-n"></span>
-                    </button>
-                    <ul
-                      class="dropdown-menu location-dropdownmenu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <!-- Search input with icon -->
-                      <li class="dropdown-header">
-                        <div class="search-container">
-                          <img
-                            src="images/searchImage.svg"
-                            class="search-icon img-fluid"
-                            alt=""
-                          />
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Search here..."
-                            aria-label="Search"
-                          />
-                        </div>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">The Batter Station</a>
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#"
-                          >Maple Street Kitchen</a
-                        >
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#"
-                          >Golden Griddle Cake</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3 mt-md-2 mt-sm-1">
-                  <span class="me-2">Employment Type:</span>
-                  <input type="radio" id="onsite" name="site" value="On Site" />
-                  <label for="On Site" class="me-1">On Site</label>
-
-                  <input
-                    type="radio"
-                    id="offsite"
-                    name="site"
-                    value="Off Site"
-                  />
-                  <label for="Off Site">Off Site</label>
                 </div>
               </div>
             </div>
@@ -993,7 +655,7 @@
       aria-labelledby="departmentModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-md modal-dialog-centered">
         <div class="modal-content">
           <div
             class="modal-header border-bottom-0 pb-0 d-flex justify-content-start"
@@ -1001,29 +663,31 @@
             <img src="images/employeedetailIcon.svg" alt="" />
             <h4 class="mx-2 emp-font">Employee Details</h4>
           </div>
-          <div class="modal-body pt-0">
-            <div class="row">
-              <div class="col-md-6">
+          <div class="modal-body py-0">
+            <div class="row mt-0">
+              <div class="col-md-12 my-2">
                 <div class="mb-3">
-                  <div class="floating-label-inline">
-                    <input type="text" id="name" placeholder=" " required />
-                    <label for="name" class="required-label"
-                      >Employee Code</label
-                    >
-                  </div>
+                  <p class="modal-body-header-font">
+                    Current Department :
+                    <span>Raw House</span>
+                  </p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
                   <div class="dropdown location-dropdow-btn">
                     <button
-                      class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
+                      class="btn dropdownbtn-border dropdownbtn-height dropdown-toggle w-100 locat-btn"
                       type="button"
                       id="dropdownMenuButton"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      <span class="button-text">Location</span>
+                      <span class="button-text"
+                        >New Department<span class="required-asterisk"
+                          >*</span
+                        ></span
+                      >
                       <span class="dropdown-icon dropdown-icon-n"></span>
                     </button>
                     <ul
@@ -1070,13 +734,17 @@
                 <div class="mb-3">
                   <div class="dropdown location-dropdow-btn">
                     <button
-                      class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
+                      class="btn dropdownbtn-border dropdownbtn-height dropdown-toggle w-100 locat-btn"
                       type="button"
                       id="dropdownMenuButton"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      <span class="button-text">Department</span>
+                      <span class="button-text"
+                        >New Designation<span class="required-asterisk"
+                          >*</span
+                        ></span
+                      >
                       <span class="dropdown-icon dropdown-icon-n"></span>
                     </button>
                     <ul
@@ -1117,305 +785,6 @@
                       </li>
                     </ul>
                   </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <div class="dropdown location-dropdow-btn">
-                    <button
-                      class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <span class="button-text">Area</span>
-                      <span class="dropdown-icon dropdown-icon-n"></span>
-                    </button>
-                    <ul
-                      class="dropdown-menu location-dropdownmenu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <!-- Search input with icon -->
-                      <li class="dropdown-header">
-                        <div class="search-container">
-                          <img
-                            src="images/searchImage.svg"
-                            class="search-icon img-fluid"
-                            alt=""
-                          />
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Search here..."
-                            aria-label="Search"
-                          />
-                        </div>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">The Batter Station</a>
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#"
-                          >Maple Street Kitchen</a
-                        >
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#"
-                          >Golden Griddle Cake</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <div class="dropdown location-dropdow-btn">
-                    <button
-                      class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <span class="button-text">Designation</span>
-                      <span class="dropdown-icon dropdown-icon-n"></span>
-                    </button>
-                    <ul
-                      class="dropdown-menu location-dropdownmenu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <!-- Search input with icon -->
-                      <li class="dropdown-header">
-                        <div class="search-container">
-                          <img
-                            src="images/searchImage.svg"
-                            class="search-icon img-fluid"
-                            alt=""
-                          />
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Search here..."
-                            aria-label="Search"
-                          />
-                        </div>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">The Batter Station</a>
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#"
-                          >Maple Street Kitchen</a
-                        >
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#"
-                          >Golden Griddle Cake</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <div class="dropdown location-dropdow-btn">
-                    <button
-                      class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <span class="button-text">Reporting Manager</span>
-                      <span class="dropdown-icon dropdown-icon-n"></span>
-                    </button>
-                    <ul
-                      class="dropdown-menu location-dropdownmenu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <!-- Search input with icon -->
-                      <li class="dropdown-header">
-                        <div class="search-container">
-                          <img
-                            src="images/searchImage.svg"
-                            class="search-icon img-fluid"
-                            alt=""
-                          />
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Search here..."
-                            aria-label="Search"
-                          />
-                        </div>
-                      </li>
-                      <li class="p-1">
-                        <div
-                          class="form-check d-flex justify-content-between menu-font px-4"
-                        >
-                          <div>
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="mapleStreetKitchen"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="mapleStreetKitchen"
-                            >
-                              Rahul Verma
-                            </label>
-                          </div>
-                          <div>
-                            <span>Product Manager</span>
-                          </div>
-                          <div>
-                            <span>SOP2001</span>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="p-1">
-                        <div
-                          class="form-check d-flex justify-content-between menu-font px-4"
-                        >
-                          <div>
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="mapleStreetKitchen"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="mapleStreetKitchen"
-                            >
-                              Rahul Verma
-                            </label>
-                          </div>
-                          <div>
-                            <span>Product Manager</span>
-                          </div>
-                          <div>
-                            <span>SOP2001</span>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="p-1">
-                        <div
-                          class="form-check d-flex justify-content-between menu-font px-4"
-                        >
-                          <div>
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="mapleStreetKitchen"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="mapleStreetKitchen"
-                            >
-                              Rahul Verma
-                            </label>
-                          </div>
-                          <div>
-                            <span>Product Manager</span>
-                          </div>
-                          <div>
-                            <span>SOP2001</span>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <div class="floating-label-inline">
-                    <input type="date" id="name" placeholder=" " required />
-                    <label for="phone" class="required-label"
-                      >Joining Date</label
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <div class="dropdown location-dropdow-btn">
-                    <button
-                      class="btn btn-outline-secondary dropdown-toggle w-100 locat-btn"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <span class="button-text">Timezone</span>
-                      <span class="dropdown-icon dropdown-icon-n"></span>
-                    </button>
-                    <ul
-                      class="dropdown-menu location-dropdownmenu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <!-- Search input with icon -->
-                      <li class="dropdown-header">
-                        <div class="search-container">
-                          <img
-                            src="images/searchImage.svg"
-                            class="search-icon img-fluid"
-                            alt=""
-                          />
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Search here..."
-                            aria-label="Search"
-                          />
-                        </div>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">The Batter Station</a>
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#"
-                          >Maple Street Kitchen</a
-                        >
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
-                      </li>
-                      <li class="border-top border-1">
-                        <a class="dropdown-item" href="#"
-                          >Golden Griddle Cake</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3 mt-md-2 mt-sm-1">
-                  <span class="me-2">Employment Type:</span>
-                  <input type="radio" id="onsite" name="site" value="On Site" />
-                  <label for="On Site" class="me-1">On Site</label>
-
-                  <input
-                    type="radio"
-                    id="offsite"
-                    name="site"
-                    value="Off Site"
-                  />
-                  <label for="Off Site">Off Site</label>
                 </div>
               </div>
             </div>
@@ -1477,7 +846,7 @@
               <!-- Left Column: Content From Library -->
               <div class="col-md-6">
                 <div class="modal-box mb-3">
-                  <h6>All Training</h6>
+                  <h6>All Trainings</h6>
                   <div class="search-container d-flex align-items-center">
                     <img
                       src="images/searchImage.svg"
@@ -1493,7 +862,7 @@
                   </div>
                   <div class="content-library-list mt-3">
                     <div
-                      class="d-flex align-items-center justify-content-between mt-2 content-border pb-2 ps-1"
+                      class="d-flex align-items-center justify-content-between mt-2 content-border pb-2 ps-1 jobrole-hover"
                     >
                       <div class="form-check d-flex align-items-center">
                         <input
@@ -1506,7 +875,7 @@
                       </div>
                     </div>
                     <div
-                      class="d-flex align-items-center justify-content-between mt-2 content-border pb-2 ps-1"
+                      class="d-flex align-items-center justify-content-between mt-2 content-border pb-2 ps-1 jobrole-hover"
                     >
                       <div class="form-check d-flex align-items-center">
                         <input
@@ -1564,7 +933,7 @@
                   <div class="content-library-list mt-3">
                     <!-- Example selected file entry -->
                     <div
-                      class="d-flex align-items-center justify-content-between mt-2 content-border pb-2 ps-1"
+                      class="d-flex align-items-center justify-content-between mt-2 content-border pb-2 ps-1 jobrole-hover"
                     >
                       <div class="form-check d-flex align-items-center">
                         <input
@@ -1577,7 +946,7 @@
                       </div>
                     </div>
                     <div
-                      class="d-flex align-items-center justify-content-between mt-2 content-border pb-2 ps-1"
+                      class="d-flex align-items-center justify-content-between mt-2 content-border pb-2 ps-1 jobrole-hover"
                     >
                       <div class="form-check d-flex align-items-center">
                         <input
@@ -1609,6 +978,806 @@
       </div>
     </div>
     <!-- Training Modal End -->
+
+    <!-- Personal Detail Modal Start -->
+    <div
+      class="modal fade"
+      id="personaldetailModal"
+      tabindex="-1"
+      aria-labelledby="personaldetailModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-header border-bottom-0 pb-0 d-flex justify-content-start"
+          >
+            <img src="images/personaldetailIcon.svg" alt="" />
+            <h4 class="mx-2 emp-font">Personal Details</h4>
+          </div>
+          <div class="modal-body py-0">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="floating-label-inline">
+                    <input type="text" id="name" placeholder=" " required />
+                    <label for="name" class="required-label">First Name</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="floating-label-inline">
+                    <input type="text" id="name" placeholder=" " required />
+                    <label for="name" class="required-label">Middle Name</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="floating-label-inline">
+                    <input type="text" id="name" placeholder=" " required />
+                    <label for="name" class="required-label">Last Name</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="floating-label-inline">
+                    <input
+                      type="text"
+                      id="contactnumber"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="number" class="required-label"
+                      >Contact Number</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="floating-label-inline">
+                    <input type="email" id="email" placeholder=" " required />
+                    <label for="email" class="required-label">Email</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="floating-label-inline">
+                    <input type="date" id="name" placeholder=" " required />
+                    <label for="phone" class="required-label"
+                      >Date Of Birth</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3 mt-md-2 mt-sm-1">
+                  <span class="me-2">Gender:</span>
+                  <input type="radio" id="male" name="gender" value="Male" />
+                  <label for="Male" class="me-1">Male</label>
+
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="Female"
+                  />
+                  <label for="Female">Female</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-top-0 d-flex justify-content-center">
+            <button type="button" class="btn modal-assign-btn">Save</button>
+            <button
+              type="button"
+              class="btn modal-assign-cancel-btn"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Personal Detail Modal End -->
+
+    <!-- Employee Detail Modal Start -->
+    <div
+      class="modal fade"
+      id="employeedetailModal"
+      tabindex="-1"
+      aria-labelledby="employeedetailModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-header border-bottom-0 pb-0 d-flex justify-content-start"
+          >
+            <img src="images/employeedetailIcon.svg" alt="" />
+            <h4 class="mx-2 emp-font">Employee Details</h4>
+          </div>
+          <div class="modal-body pt-0">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="floating-label-inline">
+                    <input
+                      type="text"
+                      class="training-bkg"
+                      id="name"
+                      value="SOP2001"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="name" class="required-label"
+                      >Employee Code</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="dropdown location-dropdow-btn">
+                    <button
+                      class="btn dropdownbtn-border dropdownbtn-height dropdown-toggle w-100 locat-btn"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="button-text"
+                        >Location<span class="required-asterisk">*</span></span
+                      >
+                      <span class="dropdown-icon dropdown-icon-n"></span>
+                    </button>
+                    <ul
+                      class="dropdown-menu location-dropdownmenu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <!-- Search input with icon -->
+                      <li class="dropdown-header">
+                        <div class="search-container">
+                          <img
+                            src="images/searchImage.svg"
+                            class="search-icon img-fluid"
+                            alt=""
+                          />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search here..."
+                            aria-label="Search"
+                          />
+                        </div>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">The Batter Station</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Maple Street Kitchen</a
+                        >
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Golden Griddle Cake</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="dropdown location-dropdow-btn">
+                    <button
+                      class="btn dropdownbtn-border dropdownbtn-height dropdown-toggle w-100 locat-btn"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="button-text"
+                        >Department<span class="required-asterisk"
+                          >*</span
+                        ></span
+                      >
+                      <span class="dropdown-icon dropdown-icon-n"></span>
+                    </button>
+                    <ul
+                      class="dropdown-menu location-dropdownmenu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <!-- Search input with icon -->
+                      <li class="dropdown-header">
+                        <div class="search-container">
+                          <img
+                            src="images/searchImage.svg"
+                            class="search-icon img-fluid"
+                            alt=""
+                          />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search here..."
+                            aria-label="Search"
+                          />
+                        </div>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">The Batter Station</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Maple Street Kitchen</a
+                        >
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Golden Griddle Cake</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="dropdown location-dropdow-btn">
+                    <button
+                      class="btn dropdownbtn-border dropdownbtn-height dropdown-toggle w-100 locat-btn"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="button-text"
+                        >Area<span class="required-asterisk">*</span></span
+                      >
+                      <span class="dropdown-icon dropdown-icon-n"></span>
+                    </button>
+                    <ul
+                      class="dropdown-menu location-dropdownmenu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <!-- Search input with icon -->
+                      <li class="dropdown-header">
+                        <div class="search-container">
+                          <img
+                            src="images/searchImage.svg"
+                            class="search-icon img-fluid"
+                            alt=""
+                          />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search here..."
+                            aria-label="Search"
+                          />
+                        </div>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">The Batter Station</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Maple Street Kitchen</a
+                        >
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Golden Griddle Cake</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="dropdown location-dropdow-btn">
+                    <button
+                      class="btn dropdownbtn-border dropdownbtn-height dropdown-toggle w-100 locat-btn"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="button-text"
+                        >Designation<span class="required-asterisk"
+                          >*</span
+                        ></span
+                      >
+                      <span class="dropdown-icon dropdown-icon-n"></span>
+                    </button>
+                    <ul
+                      class="dropdown-menu location-dropdownmenu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <!-- Search input with icon -->
+                      <li class="dropdown-header">
+                        <div class="search-container">
+                          <img
+                            src="images/searchImage.svg"
+                            class="search-icon img-fluid"
+                            alt=""
+                          />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search here..."
+                            aria-label="Search"
+                          />
+                        </div>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">The Batter Station</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Maple Street Kitchen</a
+                        >
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Golden Griddle Cake</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="dropdown location-dropdow-btn">
+                    <button
+                      class="btn dropdownbtn-border dropdownbtn-height dropdown-toggle w-100 locat-btn"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="button-text"
+                        >Reporting Manager<span class="required-asterisk"
+                          >*</span
+                        ></span
+                      >
+                      <span class="dropdown-icon dropdown-icon-n"></span>
+                    </button>
+                    <ul
+                      class="dropdown-menu location-dropdownmenu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <!-- Search input with icon -->
+                      <li class="dropdown-header">
+                        <div class="search-container">
+                          <img
+                            src="images/searchImage.svg"
+                            class="search-icon img-fluid"
+                            alt=""
+                          />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search here..."
+                            aria-label="Search"
+                          />
+                        </div>
+                      </li>
+                      <li class="p-1">
+                        <div
+                          class="form-check d-flex justify-content-between menu-font px-4"
+                        >
+                          <div>
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="mapleStreetKitchen"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="mapleStreetKitchen"
+                            >
+                              Rahul Verma
+                            </label>
+                          </div>
+                          <div>
+                            <span>Product Manager</span>
+                          </div>
+                          <div>
+                            <span>SOP2001</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="p-1">
+                        <div
+                          class="form-check d-flex justify-content-between menu-font px-4"
+                        >
+                          <div>
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="mapleStreetKitchen"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="mapleStreetKitchen"
+                            >
+                              Rahul Verma
+                            </label>
+                          </div>
+                          <div>
+                            <span>Product Manager</span>
+                          </div>
+                          <div>
+                            <span>SOP2001</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="p-1">
+                        <div
+                          class="form-check d-flex justify-content-between menu-font px-4"
+                        >
+                          <div>
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="mapleStreetKitchen"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="mapleStreetKitchen"
+                            >
+                              Rahul Verma
+                            </label>
+                          </div>
+                          <div>
+                            <span>Product Manager</span>
+                          </div>
+                          <div>
+                            <span>SOP2001</span>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="floating-label-inline">
+                    <input type="date" id="name" placeholder=" " required />
+                    <label for="phone" class="required-label"
+                      >Joining Date</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="dropdown location-dropdow-btn">
+                    <button
+                      class="btn dropdownbtn-border dropdownbtn-height dropdown-toggle w-100 locat-btn"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="button-text"
+                        >Timezone<span class="required-asterisk">*</span></span
+                      >
+                      <span class="dropdown-icon dropdown-icon-n"></span>
+                    </button>
+                    <ul
+                      class="dropdown-menu location-dropdownmenu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <!-- Search input with icon -->
+                      <li class="dropdown-header">
+                        <div class="search-container">
+                          <img
+                            src="images/searchImage.svg"
+                            class="search-icon img-fluid"
+                            alt=""
+                          />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search here..."
+                            aria-label="Search"
+                          />
+                        </div>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">The Batter Station</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Maple Street Kitchen</a
+                        >
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Golden Griddle Cake</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3 mt-md-2 mt-sm-1">
+                  <span class="me-2">Employment Type:</span>
+                  <input type="radio" id="onsite" name="site" value="On Site" />
+                  <label for="On Site" class="me-1">On Site</label>
+
+                  <input
+                    type="radio"
+                    id="offsite"
+                    name="site"
+                    value="Off Site"
+                  />
+                  <label for="Off Site">Off Site</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-top-0 d-flex justify-content-center">
+            <button type="button" class="btn modal-assign-btn">Save</button>
+            <button
+              type="button"
+              class="btn modal-assign-cancel-btn"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Employee Detail Modal End -->
+
+    <!-- Address Detail Modal Start -->
+    <div
+      class="modal fade"
+      id="addressdetailModal"
+      tabindex="-1"
+      aria-labelledby="addressdetailModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-header border-bottom-0 pb-0 d-flex justify-content-start"
+          >
+            <img src="images/addDetailIcon.svg" alt="" />
+            <h4 class="mx-2 emp-font">Address Details</h4>
+          </div>
+          <div class="modal-body pt-0">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="dropdown location-dropdow-btn">
+                    <button
+                      class="btn dropdownbtn-border dropdownbtn-height dropdown-toggle w-100 locat-btn"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="button-text"
+                        >Country<span class="required-asterisk">*</span></span
+                      >
+                      <span class="dropdown-icon dropdown-icon-n"></span>
+                    </button>
+                    <ul
+                      class="dropdown-menu location-dropdownmenu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <!-- Search input with icon -->
+                      <li class="dropdown-header">
+                        <div class="search-container">
+                          <img
+                            src="images/searchImage.svg"
+                            class="search-icon img-fluid"
+                            alt=""
+                          />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search here..."
+                            aria-label="Search"
+                          />
+                        </div>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">The Batter Station</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Maple Street Kitchen</a
+                        >
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Golden Griddle Cake</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="dropdown location-dropdow-btn">
+                    <button
+                      class="btn dropdownbtn-border dropdownbtn-height dropdown-toggle w-100 locat-btn"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="button-text"
+                        >State<span class="required-asterisk">*</span></span
+                      >
+                      <span class="dropdown-icon dropdown-icon-n"></span>
+                    </button>
+                    <ul
+                      class="dropdown-menu location-dropdownmenu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <!-- Search input with icon -->
+                      <li class="dropdown-header">
+                        <div class="search-container">
+                          <img
+                            src="images/searchImage.svg"
+                            class="search-icon img-fluid"
+                            alt=""
+                          />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search here..."
+                            aria-label="Search"
+                          />
+                        </div>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">The Batter Station</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Maple Street Kitchen</a
+                        >
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Golden Griddle Cake</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="dropdown location-dropdow-btn">
+                    <button
+                      class="btn dropdownbtn-border dropdownbtn-height dropdown-toggle w-100 locat-btn"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="button-text"
+                        >City<span class="required-asterisk">*</span></span
+                      >
+                      <span class="dropdown-icon dropdown-icon-n"></span>
+                    </button>
+                    <ul
+                      class="dropdown-menu location-dropdownmenu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <!-- Search input with icon -->
+                      <li class="dropdown-header">
+                        <div class="search-container">
+                          <img
+                            src="images/searchImage.svg"
+                            class="search-icon img-fluid"
+                            alt=""
+                          />
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search here..."
+                            aria-label="Search"
+                          />
+                        </div>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">The Batter Station</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Maple Street Kitchen</a
+                        >
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#">Fluffy Stack House</a>
+                      </li>
+                      <li class="border-top border-1">
+                        <a class="dropdown-item" href="#"
+                          >Golden Griddle Cake</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="floating-label-inline">
+                    <textarea
+                      type="text"
+                      id="address"
+                      placeholder=" "
+                      required
+                      rows="6"
+                    ></textarea>
+                    <label for="phone" class="required-label textarea-label"
+                      >Address</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="modal-footer border-top-0 d-flex justify-content-center"
+            >
+              <button type="button" class="btn modal-assign-btn">Save</button>
+              <button
+                type="button"
+                class="btn modal-assign-cancel-btn"
+                data-bs-dismiss="modal"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Address Detail Modal End -->
 
     <script>
       document.querySelectorAll(".sidebar a").forEach((link) => {
